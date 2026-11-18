@@ -1,0 +1,19 @@
+:root {
+  /* CYGNUSA Brand Tokens */
+  --color-cygnusa-sky: #0EA5E9;
+  --color-cygnusa-sky-hover: #0284C7;
+  --color-cosmic-deep: #0ea5e9;
+  --color-void-black: #0F172A;
+  --color-ether-white: #F8FAFC;
+  --color-silver-mist: #64748B;
+  --color-abundance-green: #10B981;
+  --color-surface-white: #FFFFFF;
+  --color-border-subtle: #E2E8F0;
+
+  /* Typography */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Navigation Height */
+  --header-height: 92px;
+}

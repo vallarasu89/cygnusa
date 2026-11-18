@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="engBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090f1d" />
+      <stop offset="50%" stop-color="#020617" />
+      <stop offset="100%" stop-color="#0a1024" />
+    </linearGradient>
+    <linearGradient id="engBezel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#243048" />
+      <stop offset="50%" stop-color="#131b2e" />
+      <stop offset="100%" stop-color="#0a0f1d" />
+    </linearGradient>
+    <linearGradient id="engCyanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="1" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#engBg)" />
+
+  <!-- Background Data Flow Grid -->
+  <g opacity="0.1" stroke="#38bdf8" stroke-width="0.5">
+    <line x1="0" y1="140" x2="800" y2="140" />
+    <line x1="0" y1="280" x2="800" y2="280" />
+    <line x1="0" y1="420" x2="800" y2="420" />
+    <line x1="200" y1="0" x2="200" y2="600" />
+    <line x1="400" y1="0" x2="400" y2="600" />
+    <line x1="600" y1="0" x2="600" y2="600" />
+  </g>
+
+  <!-- Modular Application Compute Node Chassis -->
+  <g transform="translate(100, 110)">
+    <rect x="0" y="0" width="600" height="360" rx="8" fill="url(#engBezel)" stroke="#384966" stroke-width="2" />
+
+    <!-- Mounting Ears -->
+    <rect x="-24" y="25" width="24" height="70" rx="3" fill="#1e293b" stroke="#384966" stroke-width="1.5" />
+    <circle cx="-12" cy="45" r="4" fill="#020617" stroke="#64748b" stroke-width="1" />
+    <circle cx="-12" cy="75" r="4" fill="#020617" stroke="#64748b" stroke-width="1" />
+
+    <rect x="600" y="25" width="24" height="70" rx="3" fill="#1e293b" stroke="#384966" stroke-width="1.5" />
+    <circle cx="612" cy="45" r="4" fill="#020617" stroke="#64748b" stroke-width="1" />
+    <circle cx="612" cy="75" r="4" fill="#020617" stroke="#64748b" stroke-width="1" />
+
+    <!-- Top Diagnostic Panel -->
+    <rect x="30" y="20" width="540" height="26" rx="3" fill="#070c17" stroke="#1e293b" stroke-width="1" />
+    <g fill="#0ea5e9">
+      <circle cx="50" cy="33" r="2.5" />
+      <circle cx="65" cy="33" r="2.5" />
+      <circle cx="80" cy="33" r="2.5" />
+      <circle cx="95" cy="33" r="2.5" fill="#10b981" />
+    </g>
+    <text x="540" y="37" text-anchor="end" fill="#64748b" font-family="monospace" font-size="10" font-weight="bold" letter-spacing="1">MODULAR FABRIC • 100G FIBER</text>
+
+    <!-- Main Front Architecture (8 High-Density Blade Modules) -->
+    <rect x="30" y="60" width="540" height="260" rx="4" fill="#040813" stroke="#1e293b" stroke-width="1.5" />
+
+    <!-- 8 Hot-Pluggable Compute Slices -->
+    <g fill="#0e172a" stroke="#24344d" stroke-width="1">
+      <rect x="45" y="75" width="55" height="230" rx="3" />
+      <rect x="110" y="75" width="55" height="230" rx="3" />
+      <rect x="175" y="75" width="55" height="230" rx="3" />
+      <rect x="240" y="75" width="55" height="230" rx="3" />
+      <rect x="305" y="75" width="55" height="230" rx="3" />
+      <rect x="370" y="75" width="55" height="230" rx="3" />
+      <rect x="435" y="75" width="55" height="230" rx="3" />
+      <rect x="500" y="75" width="55" height="230" rx="3" />
+    </g>
+
+    <!-- Fiber Optic SFP+ Transceiver Ports on each blade -->
+    <g fill="#080e1a" stroke="#0ea5e9" stroke-width="1">
+      <rect x="55" y="90" width="35" height="25" rx="2" />
+      <rect x="120" y="90" width="35" height="25" rx="2" />
+      <rect x="185" y="90" width="35" height="25" rx="2" />
+      <rect x="250" y="90" width="35" height="25" rx="2" />
+      <rect x="315" y="90" width="35" height="25" rx="2" />
+      <rect x="380" y="90" width="35" height="25" rx="2" />
+      <rect x="445" y="90" width="35" height="25" rx="2" />
+      <rect x="510" y="90" width="35" height="25" rx="2" />
+    </g>
+
+    <!-- Glowing Activity LEDs -->
+    <g fill="#38bdf8">
+      <circle cx="72" cy="130" r="2.5" />
+      <circle cx="137" cy="130" r="2.5" />
+      <circle cx="202" cy="130" r="2.5" fill="#10b981" />
+      <circle cx="267" cy="130" r="2.5" />
+      <circle cx="332" cy="130" r="2.5" />
+      <circle cx="397" cy="130" r="2.5" fill="#10b981" />
+      <circle cx="462" cy="130" r="2.5" />
+      <circle cx="527" cy="130" r="2.5" />
+
+      <!-- Vertical Ventilation Grilles -->
+      <line x1="72" y1="155" x2="72" y2="280" stroke="#334155" stroke-width="2" />
+      <line x1="137" y1="155" x2="137" y2="280" stroke="#334155" stroke-width="2" />
+      <line x1="202" y1="155" x2="202" y2="280" stroke="#334155" stroke-width="2" />
+      <line x1="267" y1="155" x2="267" y2="280" stroke="#334155" stroke-width="2" />
+      <line x1="332" y1="155" x2="332" y2="280" stroke="#334155" stroke-width="2" />
+      <line x1="397" y1="155" x2="397" y2="280" stroke="#334155" stroke-width="2" />
+      <line x1="462" y1="155" x2="462" y2="280" stroke="#334155" stroke-width="2" />
+      <line x1="527" y1="155" x2="527" y2="280" stroke="#334155" stroke-width="2" />
+    </g>
+
+    <!-- Top Accent Line -->
+    <rect x="30" y="55" width="540" height="2" fill="url(#engCyanGlow)" />
+  </g>
+
+  <!-- Ambient Light Reflection -->
+  <ellipse cx="400" cy="500" rx="340" ry="30" fill="#0284c7" opacity="0.14" filter="blur(22px)" />
+</svg>

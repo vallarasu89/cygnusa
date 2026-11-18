@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="secChassisBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="50%" stop-color="#020617" />
+      <stop offset="100%" stop-color="#0a0f1d" />
+    </linearGradient>
+    <linearGradient id="secBezel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="shieldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+    <linearGradient id="secLedGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="1" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+
+  <!-- Atmospheric Dark Ground -->
+  <rect width="800" height="600" fill="url(#secChassisBg)" />
+
+  <!-- Security Matrix Ambient Overlay -->
+  <g opacity="0.08" stroke="#10b981" stroke-width="0.75">
+    <line x1="0" y1="120" x2="800" y2="120" />
+    <line x1="0" y1="280" x2="800" y2="280" />
+    <line x1="0" y1="440" x2="800" y2="440" />
+    <line x1="150" y1="0" x2="150" y2="600" />
+    <line x1="350" y1="0" x2="350" y2="600" />
+    <line x1="550" y1="0" x2="550" y2="600" />
+    <line x1="750" y1="0" x2="750" y2="600" />
+  </g>
+
+  <!-- Central Enterprise Security Appliance (Zero-Trust Hardware Gateway) -->
+  <g transform="translate(100, 110)">
+    <!-- Main Metal Chassis Shell -->
+    <rect x="0" y="0" width="600" height="360" rx="8" fill="url(#secBezel)" stroke="#334155" stroke-width="2" />
+
+    <!-- Left & Right Rack Mount Ears -->
+    <rect x="-24" y="25" width="24" height="70" rx="3" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <circle cx="-12" cy="45" r="4" fill="#020617" stroke="#475569" stroke-width="1" />
+    <circle cx="-12" cy="75" r="4" fill="#020617" stroke="#475569" stroke-width="1" />
+
+    <rect x="600" y="25" width="24" height="70" rx="3" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <circle cx="612" cy="45" r="4" fill="#020617" stroke="#475569" stroke-width="1" />
+    <circle cx="612" cy="75" r="4" fill="#020617" stroke="#475569" stroke-width="1" />
+
+    <!-- Top Status Bar & Ventilation -->
+    <rect x="30" y="20" width="540" height="30" rx="4" fill="#050811" stroke="#1e293b" stroke-width="1" />
+    <g fill="#10b981">
+      <circle cx="50" cy="35" r="3" opacity="0.9" />
+      <circle cx="70" cy="35" r="2.5" opacity="0.8" />
+      <circle cx="90" cy="35" r="2.5" opacity="0.8" />
+      <circle cx="110" cy="35" r="2.5" fill="#0ea5e9" opacity="0.9" />
+    </g>
+    <!-- ISO 27001 / Zero Trust Engraved Badge -->
+    <text x="540" y="39" text-anchor="end" fill="#64748b" font-family="monospace" font-size="10" font-weight="bold" letter-spacing="1">ZERO-TRUST HSM • ISO 27001</text>
+
+    <!-- Center Security Vault Core Display & Encryption Banks -->
+    <rect x="30" y="65" width="540" height="255" rx="4" fill="#030712" stroke="#1e293b" stroke-width="1.5" />
+
+    <!-- Cryptographic Shield Core (Left Center) -->
+    <g transform="translate(60, 95)">
+      <rect x="0" y="0" width="180" height="195" rx="4" fill="#0a0f1d" stroke="#1e293b" stroke-width="1" />
+      <!-- Stylized Security Shield -->
+      <path d="M 90 30 L 140 50 L 140 100 C 140 135 90 165 90 165 C 90 165 40 135 40 100 L 40 50 Z" fill="none" stroke="url(#shieldGlow)" stroke-width="3" />
+      <path d="M 90 45 L 125 60 L 125 100 C 125 125 90 148 90 148 C 90 148 55 125 55 100 L 55 60 Z" fill="#0f172a" stroke="#10b981" stroke-width="1.5" opacity="0.6" />
+      <!-- Center Lock / Checkmark -->
+      <path d="M 78 98 L 86 106 L 104 88" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="90" y="180" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="9" letter-spacing="1">ENCRYPTION: AES-256</text>
+    </g>
+
+    <!-- Hardware Encrypted Key Storage Bays (Right Center) -->
+    <g transform="translate(260, 95)" fill="#0d1424" stroke="#1e293b" stroke-width="1">
+      <!-- 6 Hardware Security Module (HSM) Vault Blades -->
+      <rect x="0" y="0" width="140" height="55" rx="2" />
+      <rect x="155" y="0" width="140" height="55" rx="2" />
+      
+      <rect x="0" y="70" width="140" height="55" rx="2" />
+      <rect x="155" y="70" width="140" height="55" rx="2" />
+
+      <rect x="0" y="140" width="140" height="55" rx="2" />
+      <rect x="155" y="140" width="140" height="55" rx="2" />
+
+      <!-- Active Green Status Indicators on each vault blade -->
+      <circle cx="15" cy="15" r="2.5" fill="#10b981" stroke="none" />
+      <circle cx="170" cy="15" r="2.5" fill="#10b981" stroke="none" />
+      <circle cx="15" cy="85" r="2.5" fill="#10b981" stroke="none" />
+      <circle cx="170" cy="85" r="2.5" fill="#0ea5e9" stroke="none" />
+      <circle cx="15" cy="155" r="2.5" fill="#10b981" stroke="none" />
+      <circle cx="170" cy="155" r="2.5" fill="#10b981" stroke="none" />
+
+      <line x1="30" y1="28" x2="120" y2="28" stroke="#334155" stroke-width="2" />
+      <line x1="185" y1="28" x2="275" y2="28" stroke="#334155" stroke-width="2" />
+      <line x1="30" y1="98" x2="120" y2="98" stroke="#334155" stroke-width="2" />
+      <line x1="185" y1="98" x2="275" y2="98" stroke="#334155" stroke-width="2" />
+      <line x1="30" y1="168" x2="120" y2="168" stroke="#334155" stroke-width="2" />
+      <line x1="185" y1="168" x2="275" y2="168" stroke="#334155" stroke-width="2" />
+    </g>
+
+    <!-- Top Perimeter LED Status Runner Strip -->
+    <rect x="30" y="60" width="540" height="2" fill="url(#secLedGlow)" />
+  </g>
+
+  <!-- Ambient Under-Glow -->
+  <ellipse cx="400" cy="500" rx="340" ry="30" fill="#10b981" opacity="0.12" filter="blur(22px)" />
+</svg>

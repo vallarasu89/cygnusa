@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="aiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e172a" />
+      <stop offset="50%" stop-color="#020617" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="aiBezel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="aiPulse" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#aiBg)" />
+
+  <!-- Neural Mesh Ambient Background -->
+  <g opacity="0.12" stroke="#818cf8" stroke-width="0.75">
+    <circle cx="150" cy="180" r="3" fill="#818cf8" />
+    <circle cx="280" cy="120" r="3" fill="#818cf8" />
+    <circle cx="420" cy="200" r="3" fill="#818cf8" />
+    <circle cx="580" cy="140" r="3" fill="#818cf8" />
+    <circle cx="700" cy="220" r="3" fill="#818cf8" />
+
+    <line x1="150" y1="180" x2="280" y2="120" />
+    <line x1="280" y1="120" x2="420" y2="200" />
+    <line x1="420" y1="200" x2="580" y2="140" />
+    <line x1="580" y1="140" x2="700" y2="220" />
+  </g>
+
+  <!-- High-Performance AI Tensor Accelerator Unit Chassis -->
+  <g transform="translate(100, 110)">
+    <rect x="0" y="0" width="600" height="360" rx="8" fill="url(#aiBezel)" stroke="#475569" stroke-width="2" />
+
+    <!-- Mounting Ears -->
+    <rect x="-24" y="25" width="24" height="70" rx="3" fill="#1e293b" stroke="#475569" stroke-width="1.5" />
+    <circle cx="-12" cy="45" r="4" fill="#020617" stroke="#64748b" stroke-width="1" />
+    <circle cx="-12" cy="75" r="4" fill="#020617" stroke="#64748b" stroke-width="1" />
+
+    <rect x="600" y="25" width="24" height="70" rx="3" fill="#1e293b" stroke="#475569" stroke-width="1.5" />
+    <circle cx="612" cy="45" r="4" fill="#020617" stroke="#64748b" stroke-width="1" />
+    <circle cx="612" cy="75" r="4" fill="#020617" stroke="#64748b" stroke-width="1" />
+
+    <!-- Top Diagnostic Bar -->
+    <rect x="30" y="20" width="540" height="26" rx="3" fill="#050811" stroke="#1e293b" stroke-width="1" />
+    <g fill="#38bdf8">
+      <circle cx="50" cy="33" r="2.5" />
+      <circle cx="65" cy="33" r="2.5" />
+      <circle cx="80" cy="33" r="2.5" fill="#818cf8" />
+      <circle cx="95" cy="33" r="2.5" fill="#10b981" />
+    </g>
+    <text x="540" y="37" text-anchor="end" fill="#64748b" font-family="monospace" font-size="10" font-weight="bold" letter-spacing="1">NEURAL ACCELERATOR • TENSOR ARRAY</text>
+
+    <!-- Main Front Panel: 4 High-End GPU/NPU Acceleration Blocks -->
+    <rect x="30" y="60" width="540" height="260" rx="4" fill="#030712" stroke="#1e293b" stroke-width="1.5" />
+
+    <!-- 4 Tensor Compute Modules -->
+    <g fill="#0b1329" stroke="#1e293b" stroke-width="1">
+      <!-- Unit 1 -->
+      <rect x="45" y="75" width="120" height="230" rx="4" />
+      <!-- Unit 2 -->
+      <rect x="180" y="75" width="120" height="230" rx="4" />
+      <!-- Unit 3 -->
+      <rect x="315" y="75" width="120" height="230" rx="4" />
+      <!-- Unit 4 -->
+      <rect x="450" y="75" width="120" height="230" rx="4" />
+    </g>
+
+    <!-- Cooling Heatsink Blower Fans & Core Indicators -->
+    <g fill="#070c17" stroke="#334155" stroke-width="1.5">
+      <circle cx="105" cy="140" r="42" />
+      <circle cx="240" cy="140" r="42" />
+      <circle cx="375" cy="140" r="42" />
+      <circle cx="510" cy="140" r="42" />
+
+      <!-- Glowing Center Rotor Hubs -->
+      <circle cx="105" cy="140" r="16" fill="#0f172a" stroke="#38bdf8" />
+      <circle cx="240" cy="140" r="16" fill="#0f172a" stroke="#818cf8" />
+      <circle cx="375" cy="140" r="16" fill="#0f172a" stroke="#38bdf8" />
+      <circle cx="510" cy="140" r="16" fill="#0f172a" stroke="#10b981" />
+    </g>
+
+    <!-- Tensor Core Activity LED Matrix below each fan -->
+    <g fill="#38bdf8">
+      <!-- Unit 1 Matrix -->
+      <circle cx="75" cy="215" r="2" />
+      <circle cx="95" cy="215" r="2" />
+      <circle cx="115" cy="215" r="2" />
+      <circle cx="135" cy="215" r="2" />
+      <circle cx="75" cy="235" r="2" />
+      <circle cx="95" cy="235" r="2" fill="#818cf8" />
+      <circle cx="115" cy="235" r="2" />
+      <circle cx="135" cy="235" r="2" fill="#10b981" />
+
+      <!-- Unit 2 Matrix -->
+      <circle cx="210" cy="215" r="2" />
+      <circle cx="230" cy="215" r="2" />
+      <circle cx="250" cy="215" r="2" fill="#818cf8" />
+      <circle cx="270" cy="215" r="2" />
+      <circle cx="210" cy="235" r="2" fill="#10b981" />
+      <circle cx="230" cy="235" r="2" />
+      <circle cx="250" cy="235" r="2" />
+      <circle cx="270" cy="235" r="2" />
+
+      <!-- Unit 3 Matrix -->
+      <circle cx="345" cy="215" r="2" />
+      <circle cx="365" cy="215" r="2" fill="#818cf8" />
+      <circle cx="385" cy="215" r="2" />
+      <circle cx="405" cy="215" r="2" />
+      <circle cx="345" cy="235" r="2" />
+      <circle cx="365" cy="235" r="2" />
+      <circle cx="385" cy="235" r="2" fill="#10b981" />
+      <circle cx="405" cy="235" r="2" />
+
+      <!-- Unit 4 Matrix -->
+      <circle cx="480" cy="215" r="2" />
+      <circle cx="500" cy="215" r="2" />
+      <circle cx="520" cy="215" r="2" fill="#818cf8" />
+      <circle cx="540" cy="215" r="2" />
+      <circle cx="480" cy="235" r="2" fill="#10b981" />
+      <circle cx="500" cy="235" r="2" />
+      <circle cx="520" cy="235" r="2" />
+      <circle cx="540" cy="235" r="2" />
+    </g>
+
+    <!-- Bottom Status Text per unit -->
+    <g fill="#64748b" font-family="monospace" font-size="8" text-anchor="middle">
+      <text x="105" y="280">NPU-01</text>
+      <text x="240" y="280">NPU-02</text>
+      <text x="375" y="280">NPU-03</text>
+      <text x="510" y="280">NPU-04</text>
+    </g>
+
+    <!-- Top Glow Line -->
+    <rect x="30" y="55" width="540" height="2" fill="url(#aiPulse)" />
+  </g>
+
+  <!-- Ambient Light Reflection -->
+  <ellipse cx="400" cy="500" rx="340" ry="30" fill="#38bdf8" opacity="0.14" filter="blur(22px)" />
+</svg>
