@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/common/Button';
-import { ArrowRight, Mail, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 export const ContactCTASection: React.FC = () => {
   return (
@@ -31,10 +31,10 @@ export const ContactCTASection: React.FC = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              className="rounded-full bg-cygnusa-sky hover:bg-cygnusa-sky-hover text-white px-8 py-3.5 font-semibold text-xs sm:text-sm shadow-sm transition-all duration-200"
+              withArrow
+              className="rounded-full bg-cygnusa-sky hover:bg-cygnusa-sky-hover text-white px-8 py-3.5 font-semibold text-xs sm:text-sm shadow-sm transition-all duration-200 whitespace-nowrap"
             >
-              <span>Contact sales</span>
-              <ArrowRight className="w-4 h-4 ml-1.5" />
+              Contact sales
             </Button>
           </div>
         </div>

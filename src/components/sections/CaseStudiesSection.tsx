@@ -171,10 +171,10 @@ export const CaseStudiesSection: React.FC = () => {
                   <div className="pt-4 border-t border-cygnusa-border/70 flex items-center justify-between">
                     <Link
                       to={`/case-studies/${currentCase.slug}`}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cygnusa-sky hover:bg-cygnusa-sky-hover text-white text-xs font-semibold transition-all duration-200 group shadow-sm"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cygnusa-sky hover:bg-cygnusa-sky-hover text-white text-xs font-semibold transition-all duration-200 group shadow-sm whitespace-nowrap"
                     >
                       <span>Read Full Case Study</span>
-                      <ArrowRight className="w-3.5 h-3.5 transition-transform duration-150 group-hover:translate-x-1" />
+                      <ArrowRight className="w-3.5 h-3.5 shrink-0 transition-transform duration-150 group-hover:translate-x-1" />
                     </Link>
 
                     {/* Numeric Carousel Navigation */}

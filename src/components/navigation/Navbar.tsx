@@ -3,8 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { NAVIGATION_DATA, NavItem } from '@/data/navigation';
 import { MegaMenu } from './MegaMenu';
 import { MobileNavigation } from './MobileNavigation';
-import { GooeyNav } from './GooeyNav';
-import { Search, Menu, ArrowRight } from 'lucide-react';
+import { Search, Menu, ArrowRight, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
@@ -72,43 +71,50 @@ export const Navbar: React.FC = () => {
               />
             </Link>
 
-            {/* Centre: Desktop Menu with WebGL Gooey Fluid Navigation (Click-to-Open Submenu Only) */}
-            <div className="hidden lg:flex items-center h-full relative">
-              <GooeyNav
-                items={NAVIGATION_DATA.map((item) => ({
-                  id: item.id,
-                  label: item.label,
-                  href: '#',
-                  hasSubNav: Boolean(item.categories && item.categories.length > 0),
-                  isOpen: activeMenuId === item.id,
-                }))}
-                activeIndex={
-                  activeMenuId
-                    ? NAVIGATION_DATA.findIndex((i) => i.id === activeMenuId)
-                    : location.pathname !== '/'
-                      ? Math.max(0, NAVIGATION_DATA.findIndex((i) => location.pathname.startsWith(i.href)))
-                      : 0
-                }
-                theme="light"
-                color="#0EA5E9"
-                activeTextColor="#ffffff"
-                size="md"
-                frame={true}
-                particleCount={20}
-                spread={62}
-                animationTime={850}
-                timeVariance={280}
-                gooeyness={0.58}
-                wobble={0.2}
-                hoverEffect
-                onChange={(_index, item) => {
-                  if (item.id) {
-                    const navItem = NAVIGATION_DATA.find((i) => i.id === item.id);
-                    if (navItem) handleNavClick(navItem);
-                  }
-                }}
-              />
-            </div>
+            {/* Centre: Desktop Menu with Clean Enterprise Navigation */}
+            <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2 h-full" aria-label="Main Navigation">
+              {NAVIGATION_DATA.map((item) => {
+                const isOpen = activeMenuId === item.id;
+                const isCurrentPath = location.pathname.startsWith(item.href) && item.href !== '/';
+                const isActive = isOpen || isCurrentPath;
+                const hasSubNav = Boolean(item.categories && item.categories.length > 0);
+
+                return (
+                  <div key={item.id} className="relative h-full flex items-center">
+                    <button
+                      type="button"
+                      onClick={() => handleNavClick(item)}
+                      aria-expanded={isOpen}
+                      aria-haspopup={hasSubNav}
+                      className={cn(
+                        'flex items-center gap-1.5 px-3.5 py-2 text-xs md:text-sm font-semibold font-heading tracking-tight rounded-md transition-all duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cygnusa-sky',
+                        isActive
+                          ? 'text-cygnusa-sky font-bold bg-sky-50/70'
+                          : 'text-cygnusa-void hover:text-cygnusa-sky hover:bg-slate-50'
+                      )}
+                    >
+                      <span>{item.label}</span>
+                      {hasSubNav && (
+                        <ChevronDown
+                          className={cn(
+                            'w-3.5 h-3.5 transition-transform duration-200 shrink-0',
+                            isOpen ? 'rotate-180 text-cygnusa-sky' : 'text-slate-400'
+                          )}
+                        />
+                      )}
+                    </button>
+
+                    {/* Active Bottom Highlight Bar */}
+                    {isActive && (
+                      <span
+                        className="absolute bottom-0 left-3 right-3 h-[2.5px] bg-cygnusa-sky rounded-t-full pointer-events-none"
+                        aria-hidden="true"
+                      />
+                    )}
+                  </div>
+                );
+              })}
+            </nav>
 
             {/* Right: Search + Unique Premium Action Button */}
             <div className="flex items-center space-x-3 sm:space-x-4">

@@ -19,16 +19,16 @@ export interface OfficeMember {
 
 export const OFFICE_MEMBERS: OfficeMember[] = [
   {
-    id: 'arunachalam',
-    name: 'Arunachalam K',
-    role: 'Managing Director & CEO',
+    id: 'muthuraman',
+    name: 'Muthuraman R',
+    role: 'Founder & Managing Director',
     department: 'Executive Leadership',
     empId: 'CYG-001',
-    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
-    experience: '22+ Years in Enterprise Tech',
+    avatarUrl: '/team/muthuraman-r.jpg',
+    experience: '25+ Years in Enterprise Tech',
     location: 'Chennai HQ',
-    bio: 'Visionary technology leader with over two decades guiding Fortune 500 digital transformations and scaling enterprise IT service delivery across Asia-Pacific and North America.',
-    specialties: ['Enterprise IT Strategy', 'Global Delivery', 'Advise-Build-Run Model'],
+    bio: 'Founder and executive leader of CYGNUSA Technologies with over 25+ years guiding enterprise IT service delivery, strategic technology advisory, and digital transformations across Asia-Pacific and North America.',
+    specialties: ['Enterprise IT Strategy', 'Global Delivery Leadership', 'Advise-Build-Run Model'],
   },
   {
     id: 'sathish',
@@ -60,7 +60,7 @@ export const OFFICE_MEMBERS: OfficeMember[] = [
     role: 'Head of Product Engineering',
     department: 'Software Engineering',
     empId: 'CYG-012',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
+    avatarUrl: "",
     experience: '10+ Years Full-Stack Systems',
     location: 'Chennai HQ',
     bio: 'Spearheads CYGNUSA enterprise application development, modular microservices platforms, and high-concurrency cloud-native SaaS delivery with automated CI/CD pipelines.',
@@ -349,13 +349,13 @@ function createStrapDataUrl(): string {
 export const TeamLanyardSection: React.FC = () => {
   // Founder member highlighted individually at the top
   const founder = useMemo(
-    () => OFFICE_MEMBERS.find((m) => m.id === 'arunachalam') || OFFICE_MEMBERS[0],
+    () => OFFICE_MEMBERS.find((m) => m.id === 'muthuraman') || OFFICE_MEMBERS[0],
     []
   );
 
   // Remaining team members shown in ID card gallery
   const teamMembers = useMemo(
-    () => OFFICE_MEMBERS.filter((m) => m.id !== 'arunachalam'),
+    () => OFFICE_MEMBERS.filter((m) => m.id !== 'muthuraman'),
     []
   );
 
@@ -390,7 +390,7 @@ export const TeamLanyardSection: React.FC = () => {
   const strapImageUrl = useMemo(() => createStrapDataUrl(), []);
 
   return (
-    <section id="office-members" className="py-20 bg-slate-50 border-b border-cygnusa-border overflow-hidden">
+    <section id="leadership" className="py-20 bg-slate-50 border-b border-cygnusa-border overflow-hidden">
       <Container>
         {/* Section Header */}
         <div className="max-w-3xl mb-12">

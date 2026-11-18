@@ -23,7 +23,7 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    'inline-flex items-center justify-center font-medium font-sans transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cygnusa-sky focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed select-none rounded-[5px]';
+    'inline-flex items-center justify-center font-medium font-sans whitespace-nowrap transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cygnusa-sky focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed select-none rounded-[5px]';
 
   const variants = {
     primary:
@@ -52,12 +52,12 @@ export const Button: React.FC<ButtonProps> = ({
   );
 
   const content = (
-    <>
+    <span className="inline-flex items-center justify-center gap-2 whitespace-nowrap">
       <span>{children}</span>
       {withArrow && (
-        <ArrowRight className="w-4 h-4 transition-transform duration-150 group-hover:translate-x-0.5" />
+        <ArrowRight className="w-4 h-4 shrink-0 transition-transform duration-150 group-hover:translate-x-1" />
       )}
-    </>
+    </span>
   );
 
   if (href) {
