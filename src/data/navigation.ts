@@ -803,6 +803,42 @@ export const NAVIGATION_DATA: NavItem[] = [
         },
       },
       {
+        id: 'tools-and-templates',
+        title: 'Tools & Templates',
+        heading: 'Enterprise Architecture Toolkits & Frameworks',
+        description:
+          'Production-ready engineering blueprints, FinOps cloud calculators, ISO 27001 compliance checklists, and executive decision matrices.',
+        links: [
+          {
+            title: 'Cloud FinOps & TCO Calculator',
+            description: 'Evaluate compute rightsizing, spot savings, and multi-cloud infrastructure ROI.',
+            href: '/insights/cloud-finops-tco-calculator-template',
+          },
+          {
+            title: 'ISO 27001:2022 Audit Readiness Checklist',
+            description: 'Comprehensive Annex A gap analysis template for enterprise security evaluations.',
+            href: '/insights/iso-27001-audit-readiness-checklist',
+          },
+          {
+            title: 'Virtual CTO Strategic Roadmap Canvas',
+            description: 'Executive framework aligning business growth targets with engineering capacity.',
+            href: '/insights/virtual-cto-technology-roadmap-canvas',
+          },
+          {
+            title: 'Private Enterprise RAG Architecture Design',
+            description: 'Zero-data-leakage reference pattern for self-hosted LLM document pipelines.',
+            href: '/insights/practical-ai-integration-operations',
+          },
+        ],
+        featureCard: {
+          title: 'Actionable Engineering Toolkits',
+          description: 'Download vetted frameworks, architecture matrices, and calculation tools built for enterprise delivery.',
+          image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
+          linkText: 'Explore All Tools & Templates',
+          linkHref: '/insights?category=Tools+%26+Templates',
+        },
+      },
+      {
         id: 'case-studies-cat',
         title: 'Case Studies',
         heading: 'Verified Customer Success & Quantified ROI',

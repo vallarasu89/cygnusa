@@ -87,10 +87,10 @@ export const Navbar: React.FC = () => {
                       aria-expanded={isOpen}
                       aria-haspopup={hasSubNav}
                       className={cn(
-                        'flex items-center gap-1.5 px-3.5 py-2 text-xs md:text-sm font-semibold font-heading tracking-tight rounded-md transition-all duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cygnusa-sky',
+                        'group flex items-center gap-1.5 px-3.5 py-2 text-xs md:text-sm font-semibold font-heading tracking-tight transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cygnusa-sky bg-transparent',
                         isActive
-                          ? 'text-cygnusa-sky font-bold bg-sky-50/70'
-                          : 'text-cygnusa-void hover:text-cygnusa-sky hover:bg-slate-50'
+                          ? 'text-cygnusa-sky font-bold'
+                          : 'text-cygnusa-void hover:text-cygnusa-sky'
                       )}
                     >
                       <span>{item.label}</span>
@@ -98,7 +98,7 @@ export const Navbar: React.FC = () => {
                         <ChevronDown
                           className={cn(
                             'w-3.5 h-3.5 transition-transform duration-200 shrink-0',
-                            isOpen ? 'rotate-180 text-cygnusa-sky' : 'text-slate-400'
+                            isOpen ? 'rotate-180 text-cygnusa-sky' : 'text-slate-400 group-hover:text-cygnusa-sky'
                           )}
                         />
                       )}
@@ -122,7 +122,7 @@ export const Navbar: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setSearchOpen(!searchOpen)}
-                className="p-2.5 text-cygnusa-void hover:text-cygnusa-sky hover:bg-slate-100 rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cygnusa-sky"
+                className="p-2.5 text-cygnusa-void hover:text-cygnusa-sky transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cygnusa-sky bg-transparent"
                 aria-label="Search website"
                 title="Search website"
               >
@@ -144,7 +144,7 @@ export const Navbar: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="lg:hidden p-2 text-cygnusa-void hover:text-cygnusa-sky hover:bg-slate-100 rounded-[5px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cygnusa-sky"
+                className="lg:hidden p-2 text-cygnusa-void hover:text-cygnusa-sky transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cygnusa-sky bg-transparent"
                 aria-label="Open mobile menu"
               >
                 <Menu className="w-6 h-6" />

@@ -2,7 +2,7 @@ export interface InsightItem {
   id: string;
   slug: string;
   title: string;
-  category: 'Article' | 'Case Study' | 'Technology Update' | 'Company News';
+  category: 'Article' | 'Case Study' | 'Technology Update' | 'Company News' | 'Tools & Templates';
   readTime: string;
   publishedDate: string;
   excerpt: string;
@@ -68,5 +68,64 @@ A practical Zero-Trust implementation for growing companies focuses on four crit
 4. Automated Immutable Backups: Establishing air-gapped snapshots that allow complete system recovery in hours rather than weeks during a ransomware emergency.`,
     author: 'CYGNUSA Cyber Security Division',
     tags: ['Cybersecurity', 'Zero Trust', 'ISO 27001', 'Cloud Security'],
+  },
+  {
+    id: 'tool-1',
+    slug: 'cloud-finops-tco-calculator-template',
+    title: 'Cloud FinOps & Infrastructure TCO Calculator: Enterprise Rightsizing Framework',
+    category: 'Tools & Templates',
+    readTime: 'Template & Tool',
+    publishedDate: 'November 2026',
+    excerpt: 'A comprehensive downloadable FinOps evaluation framework to identify unattached EBS volumes, rightsizing oversized RDS instances, and forecasting savings before multi-cloud migration.',
+    content: `Effective cloud governance requires disciplined FinOps practices. Most mid-market enterprises overspend on AWS and Azure by 30% to 45% due to idle instances, orphaned snapshots, and lack of committed savings plans.
+
+This CYGNUSA FinOps & TCO Assessment Toolkit provides:
+1. Automated Cloud Spend Audit Checklist: 25 inspection vectors across compute, managed storage, and data egress.
+2. Rightsizing Formula Worksheet: Mathematical models to evaluate vCPU vs Memory utilization metrics before downgrading node families.
+3. Reserved Instances vs Savings Plans Decision Matrix: Quantifying breakeven points for 1-year vs 3-year commitments.
+4. Egress Traffic Cost Mitigator: Architecting VPC peering and CloudFront CDN caching to reduce public IP transfer penalties.
+
+Contact the CYGNUSA Cloud Engineering Group to execute an automated FinOps analysis against your live cloud bills.`,
+    author: 'CYGNUSA Cloud & DevOps Practice',
+    tags: ['FinOps', 'AWS', 'Azure', 'Cost Optimization', 'Cloud Calculator'],
+  },
+  {
+    id: 'tool-2',
+    slug: 'iso-27001-audit-readiness-checklist',
+    title: 'ISO 27001:2022 Audit Readiness & Annex A Controls Checklist for Growing SaaS & Fintechs',
+    category: 'Tools & Templates',
+    readTime: 'Compliance Checklist',
+    publishedDate: 'October 2026',
+    excerpt: 'The complete 93-control gap analysis spreadsheet covering Organizational, People, Physical, and Technological security measures to accelerate your certification roadmap.',
+    content: `Achieving ISO/IEC 27001:2022 certification is no longer optional for software companies selling into North American or European enterprise accounts.
+
+This readiness checklist breaks down the 93 Annex A controls into pragmatic milestones:
+1. Organizational Controls (A.5): Policies for information security, supplier management, asset inventory, and incident response runbooks.
+2. People Controls (A.6): Background verification, non-disclosure agreements, and continuous security awareness phishing training.
+3. Physical Controls (A.7): Physical security perimeters, clean desk policies, and device disposal logging.
+4. Technological Controls (A.8): Endpoint security, data masking, privileged access management (PAM), web filtering, and secure software development lifecycle (SSDLC).
+
+Use this audit matrix to conduct internal mock-audits before engaging certified third-party registrars.`,
+    author: 'CYGNUSA Information Security Group',
+    tags: ['ISO 27001', 'Cybersecurity', 'Compliance', 'Audit Checklist', 'Governance'],
+  },
+  {
+    id: 'tool-3',
+    slug: 'virtual-cto-technology-roadmap-canvas',
+    title: 'Virtual CTO Technology Strategy Canvas: Aligning Product Roadmaps with Enterprise Governance',
+    category: 'Tools & Templates',
+    readTime: 'Strategy Canvas',
+    publishedDate: 'October 2026',
+    excerpt: 'An executive 1-page canvas designed for founders, CEOs, and investors to map technical debt, team velocity, architecture modernization, and security baselines onto a unified timeline.',
+    content: `When scaling from Series A to growth stage, technology leadership often struggles to communicate architecture investments in language that board members and non-technical stakeholders understand.
+
+The CYGNUSA Virtual CTO Strategy Canvas bridges this communication divide:
+- Horizon 1 (Run): Keeping the lights on, 99.99% uptime SLAs, patch management, and immediate bug triage.
+- Horizon 2 (Build): High-impact product feature velocity, API integrations, and mobile customer experience upgrades.
+- Horizon 3 (Transform): Long-term architectural defensibility, private AI capabilities, data lake consolidation, and automated compliance.
+
+Download this strategic planning template to align your engineering sprints directly with revenue goals.`,
+    author: 'CYGNUSA Advisory Practice',
+    tags: ['Virtual CTO', 'Strategy Canvas', 'Enterprise Architecture', 'Leadership'],
   },
 ];

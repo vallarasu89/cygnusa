@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import { SEO } from '@/seo/SEO';
 import { Container } from '@/components/layout/Container';
 import { Breadcrumbs } from '@/components/common/Breadcrumbs';
@@ -8,8 +8,27 @@ import { Clock, ArrowRight } from 'lucide-react';
 import { ContactCTASection } from '@/components/sections/ContactCTASection';
 
 export const Insights: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const categories = ['All', 'Article', 'Technology Update', 'Case Study'];
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initialCategory = searchParams.get('category') || 'All';
+  const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory);
+  const categories = ['All', 'Tools & Templates', 'Article', 'Technology Update', 'Case Study'];
+
+  useEffect(() => {
+    const cat = searchParams.get('category');
+    if (cat && categories.includes(cat)) {
+      setSelectedCategory(cat);
+    }
+  }, [searchParams]);
+
+  const handleSelectCategory = (cat: string) => {
+    setSelectedCategory(cat);
+    if (cat === 'All') {
+      searchParams.delete('category');
+      setSearchParams(searchParams, { replace: true });
+    } else {
+      setSearchParams({ category: cat }, { replace: true });
+    }
+  };
 
   const filteredInsights =
     selectedCategory === 'All'
@@ -52,7 +71,7 @@ export const Insights: React.FC = () => {
               <button
                 key={cat}
                 type="button"
-                onClick={() => setSelectedCategory(cat)}
+                onClick={() => handleSelectCategory(cat)}
                 className={`px-4 py-2 rounded-[5px] text-xs font-semibold font-heading transition-colors ${
                   selectedCategory === cat
                     ? 'bg-cygnusa-sky text-white shadow-sm'

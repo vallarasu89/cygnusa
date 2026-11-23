@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import * as THREE from 'three';
 import gsap from 'gsap';
-import { Sun, Moon, Play, Pause } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 
 export interface RegionData {
@@ -206,8 +205,7 @@ export const InteractiveGlobe3D: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [selectedIdx, setSelectedIdx] = useState<number>(0);
-  const [globeMode, setGlobeMode] = useState<'day' | 'night'>('day');
-  const [isRotating, setIsRotating] = useState<boolean>(true);
+  const globeMode: 'day' | 'night' = 'day';
 
   const rotTargetRef = useRef<{ lat: number; lon: number }>({
     lat: REGIONS[0].lat * 0.7,
@@ -226,10 +224,8 @@ export const InteractiveGlobe3D: React.FC = () => {
         holdTimerRef.current = null;
       }
       holdRef.current = false;
-      setIsRotating(true);
     } else {
       holdRef.current = true;
-      setIsRotating(false);
       if (holdTimerRef.current) clearTimeout(holdTimerRef.current);
     }
   }, []);
@@ -478,13 +474,11 @@ export const InteractiveGlobe3D: React.FC = () => {
       }
       holdRef.current = false;
       isDragging = false;
-      setIsRotating(true);
     };
 
     const handlePointerDown = (e: PointerEvent) => {
       isDragging = true;
       holdRef.current = true;
-      setIsRotating(false);
       lastX = e.clientX;
       lastY = e.clientY;
       canvas.setPointerCapture(e.pointerId);
@@ -513,7 +507,6 @@ export const InteractiveGlobe3D: React.FC = () => {
       // Fast, responsive 1.2s timeout before gently resuming rotation
       holdTimerRef.current = setTimeout(() => {
         holdRef.current = false;
-        setIsRotating(true);
       }, 1200);
     };
 
@@ -587,14 +580,12 @@ export const InteractiveGlobe3D: React.FC = () => {
         holdTimerRef.current = null;
       }
       holdRef.current = false;
-      setIsRotating(true);
       return;
     }
 
     setSelectedIdx(index);
     const target = REGIONS[index];
     holdRef.current = true;
-    setIsRotating(false);
     if (holdTimerRef.current) clearTimeout(holdTimerRef.current);
     gsap.killTweensOf(rotTargetRef.current);
 
@@ -610,18 +601,10 @@ export const InteractiveGlobe3D: React.FC = () => {
         // Fast 1.4s focus time, then resumes rotation
         holdTimerRef.current = setTimeout(() => {
           holdRef.current = false;
-          setIsRotating(true);
         }, 1400);
       },
     });
   };
-
-  const handleToggleMode = (mode: 'day' | 'night') => {
-    setGlobeMode(mode);
-    updateGlobeTexture(mode);
-  };
-
-  const currentRegion = REGIONS[selectedIdx];
 
   return (
     <div ref={containerRef} className="w-full text-[#0F172A]">
@@ -701,76 +684,6 @@ export const InteractiveGlobe3D: React.FC = () => {
 
           {/* Ambient Radial Aura */}
           <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-sky-400/20 via-cyan-400/5 to-transparent blur-3xl pointer-events-none" />
-
-          {/* Top-Right Pill Switcher: Mode + Rotation Control */}
-          <div className="absolute top-3 right-3 z-20 inline-flex items-center p-1 rounded-full bg-white/95 backdrop-blur-md border border-slate-200/90 text-xs shadow-md gap-1">
-            {/* Quick Rotate / Pause Toggle Button */}
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleAutoRotate();
-              }}
-              title={isRotating ? 'Pause auto-rotation' : 'Resume auto-rotation'}
-              className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-semibold text-[11px] transition-all cursor-pointer ${isRotating
-                ? 'bg-sky-50 text-[#0284C7] hover:bg-sky-100 border border-sky-200/60'
-                : 'bg-amber-50 text-amber-800 hover:bg-amber-100 border border-amber-200/60'
-                }`}
-            >
-              {isRotating ? (
-                <>
-                  <Pause size={11} className="shrink-0" />
-                  <span>Spinning</span>
-                </>
-              ) : (
-                <>
-                  <Play size={11} className="shrink-0 fill-current" />
-                  <span>Rotate</span>
-                </>
-              )}
-            </button>
-
-            <div className="w-[1px] h-3.5 bg-slate-200 my-auto" />
-
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                handleToggleMode('day');
-              }}
-              className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-semibold text-[11px] transition-all cursor-pointer ${globeMode === 'day'
-                ? 'bg-gradient-to-r from-[#0284C7] to-[#0ea5e9] text-white shadow-sm'
-                : 'text-slate-600 hover:text-slate-900'
-                }`}
-            >
-              <Sun size={12} />
-              <span>Blue Marble</span>
-            </button>
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                handleToggleMode('night');
-              }}
-              className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-semibold text-[11px] transition-all cursor-pointer ${globeMode === 'night'
-                ? 'bg-[#0F172A] text-amber-300 shadow-sm'
-                : 'text-slate-600 hover:text-slate-900'
-                }`}
-            >
-              <Moon size={12} />
-              <span>Night</span>
-            </button>
-          </div>
-
-          {/* Active Target Market Telemetry HUD Pill */}
-          <div className="absolute top-3 left-3 z-20 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/90 text-xs shadow-md">
-            <span className="w-2 h-2 rounded-full bg-cygnusa-sky shrink-0" />
-            <span className="font-semibold text-slate-800">{currentRegion.name}</span>
-            <span className="text-slate-400">·</span>
-            <span className="text-slate-500 text-[11px]">
-              {currentRegion.lat > 0 ? `${currentRegion.lat}°N` : `${Math.abs(currentRegion.lat)}°S`}, {currentRegion.lon > 0 ? `${currentRegion.lon}°E` : `${Math.abs(currentRegion.lon)}°W`}
-            </span>
-          </div>
 
           {/* Interactive WebGL Canvas */}
           <canvas

@@ -1298,7 +1298,16 @@ export const Lanyard: React.FC<LanyardProps> = ({
       if (!settingsRef.current.interactive || event.button > 0) return;
       toPointer(event);
       const hit = pickCard();
-      if (!hit) return;
+      if (!hit) {
+        // Forward click to underlying elements (e.g., side cards) when clicking outside the 3D card
+        canvas.style.pointerEvents = 'none';
+        const target = document.elementFromPoint(event.clientX, event.clientY) as HTMLElement | null;
+        canvas.style.pointerEvents = 'auto';
+        if (target && !canvas.contains(target)) {
+          (target as any).click?.();
+        }
+        return;
+      }
       sim.grab = {
         local: hit.point.clone().sub(sim.body.position).applyQuaternion(sim.body.quaternion.clone().invert()),
         rotation: sim.body.quaternion.clone(),
