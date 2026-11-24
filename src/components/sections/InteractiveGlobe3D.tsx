@@ -397,13 +397,13 @@ export const InteractiveGlobe3D: React.FC = () => {
     );
     globeGroup.add(graticuleMat);
 
-    // ── 4. REGIONAL PINS (Chennai HQ in Solar Gold #F59E0B) ──
+    // ── 4. REGIONAL PINS (Akasha Cyan #06B6D4 Data Viz & Infographic Accent) ──
     const pinPositions = REGIONS.map((r) => latLonToVec3(r.lat, r.lon, 1.01));
     const rippleRings: THREE.Mesh<THREE.RingGeometry, THREE.MeshBasicMaterial>[] = [];
 
     pinPositions.forEach((pos, idx) => {
       const isHQ = idx === 0;
-      const col = isHQ ? 0xf59e0b : 0xf0f9ff;
+      const col = isHQ ? 0x06b6d4 : 0x38bdf8;
 
       // Pin core sphere
       const pinSphere = new THREE.Mesh(
@@ -417,7 +417,7 @@ export const InteractiveGlobe3D: React.FC = () => {
       const ringMesh = new THREE.Mesh(
         new THREE.RingGeometry(0.032, 0.046, 36),
         new THREE.MeshBasicMaterial({
-          color: col,
+          color: 0x06b6d4,
           transparent: true,
           side: THREE.DoubleSide,
           depthWrite: false,
@@ -429,7 +429,7 @@ export const InteractiveGlobe3D: React.FC = () => {
       rippleRings.push(ringMesh);
     });
 
-    // ── 5. CYBERNETIC FLIGHT ARCS FROM CHENNAI HQ ──
+    // ── 5. CYBERNETIC FLIGHT ARCS FROM CHENNAI HQ (Akasha Cyan #06B6D4) ──
     const arcs: THREE.Line<THREE.BufferGeometry, THREE.LineBasicMaterial>[] = [];
     for (let i = 1; i < REGIONS.length; i++) {
       const a = pinPositions[0];
@@ -440,7 +440,7 @@ export const InteractiveGlobe3D: React.FC = () => {
 
       const arcLine = new THREE.Line(
         new THREE.BufferGeometry().setFromPoints(curvePts),
-        new THREE.LineBasicMaterial({ color: 0x0ea5e9, transparent: true, opacity: 0.8 })
+        new THREE.LineBasicMaterial({ color: 0x06b6d4, transparent: true, opacity: 0.85 })
       );
       globeGroup.add(arcLine);
       arcs.push(arcLine);
@@ -612,11 +612,11 @@ export const InteractiveGlobe3D: React.FC = () => {
 
         {/* Left Column: Region Navigation List */}
         <div className="space-y-4">
-          <span className="text-sm font-semibold text-slate-800 tracking-tight block mb-2 font-sans">
+          <span className="text-sm font-semibold text-cygnusa-cosmic tracking-tight block mb-2 font-heading">
             Global delivery presence
           </span>
 
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-950 tracking-tight leading-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[36px] font-bold text-cygnusa-void tracking-tight leading-tight">
             Engineering from Chennai. <br />
             <span className="text-cygnusa-sky">
               Operating worldwide.
@@ -638,22 +638,22 @@ export const InteractiveGlobe3D: React.FC = () => {
                     onClick={() => handleSelectRegion(idx)}
                     title={isSelected ? 'Click again or double click to resume rotation' : `Focus on ${region.name}`}
                     className={`w-full flex items-center justify-between py-2.5 sm:py-3 px-3.5 sm:px-4 rounded-xl transition-all text-left border cursor-pointer ${isSelected
-                      ? 'bg-sky-50 border-sky-400 text-[#0F172A] shadow-sm'
-                      : 'border-slate-100 text-slate-600 hover:text-[#0F172A] hover:bg-slate-50'
+                      ? 'bg-cyan-50/70 border-cyan-400 text-cygnusa-void shadow-sm'
+                      : 'border-slate-100 text-slate-600 hover:text-cygnusa-void hover:bg-slate-50'
                       }`}
                   >
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="font-heading font-bold text-sm sm:text-base block text-[#0F172A]">
+                        <span className="font-heading font-bold text-sm sm:text-base block text-cygnusa-void">
                           {region.name}
                         </span>
                         {idx === 0 && (
-                          <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-100 text-amber-800">
+                          <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-cyan-100 text-cyan-800 border border-cyan-200">
                             GLOBAL HQ
                           </span>
                         )}
                       </div>
-                      <span className="text-xs text-slate-500 mt-0.5 block">
+                      <span className="text-xs text-slate-500 mt-0.5 block font-sans">
                         {region.customers}
                       </span>
                     </div>
@@ -661,7 +661,7 @@ export const InteractiveGlobe3D: React.FC = () => {
                     <div className="text-right">
                       <span
                         className={`text-xs uppercase tracking-wider px-2.5 py-1 rounded-full border ${isSelected
-                          ? 'text-[#0284C7] border-sky-300 bg-white font-semibold'
+                          ? 'text-cyan-700 border-cyan-300 bg-white font-semibold'
                           : 'text-slate-500 border-slate-200 bg-slate-50'
                           }`}
                       >
@@ -682,8 +682,8 @@ export const InteractiveGlobe3D: React.FC = () => {
           className="relative w-full aspect-square max-w-[580px] lg:max-w-[620px] mx-auto flex items-center justify-center select-none"
         >
 
-          {/* Ambient Radial Aura */}
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-sky-400/20 via-cyan-400/5 to-transparent blur-3xl pointer-events-none" />
+          {/* Ambient Radial Aura with Akasha Cyan Glow */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400/20 via-sky-400/10 to-transparent blur-3xl pointer-events-none" />
 
           {/* Interactive WebGL Canvas */}
           <canvas

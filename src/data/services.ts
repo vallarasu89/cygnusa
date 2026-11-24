@@ -7,6 +7,10 @@ export interface ServiceItem {
   tagline: string;
   heroSummary: string;
   iconName: string;
+  imageUrl: string;
+  heroImage: string;
+  diagramUrl: string;
+  accentType: 'gold' | 'violet' | 'cyan' | 'green' | 'sky';
   businessChallenges: string[];
   ourApproach: string[];
   keyCapabilities: string[];
@@ -21,10 +25,14 @@ export const SERVICES: ServiceItem[] = [
     slug: 'virtual-cto',
     title: 'Virtual CTO',
     shortDescription: 'Strategic executive technology leadership, technology roadmaps, vendor rationalization, and risk governance for growing businesses.',
-    category: 'Advisory',
+    category: 'Executive Advisory',
     tagline: 'Your Fractional CTO. Full-Scale Enterprise Impact.',
     heroSummary: 'We translate commercial business vision into executable technology roadmaps, optimize vendor and software expenses, govern security and compliance, and engineer scale-readiness for fast-growth SMBs.',
     iconName: 'Compass',
+    imageUrl: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1600&q=80',
+    diagramUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80',
+    accentType: 'violet', // Crown Violet: Premium & enterprise advisory, used sparingly
     businessChallenges: [
       'Lack of senior technical leadership to align tech investments with commercial growth goals.',
       'Spiraling vendor and software licensing costs with fragmented, redundant tech stacks.',
@@ -58,10 +66,14 @@ export const SERVICES: ServiceItem[] = [
     slug: 'managed-it-cloud',
     title: 'Managed IT & Cloud',
     shortDescription: 'Proactive 24/7 infrastructure monitoring, multi-cloud governance (AWS, Azure, GCP), automated backups, and SLA-backed uptime.',
-    category: 'Operations',
+    category: 'Cloud Operations',
     tagline: 'Zero-Downtime Multi-Cloud Operations & Unified Infrastructure.',
     heroSummary: 'Deliver 99.9% uptime and bulletproof reliability with proactive 24/7 monitoring, cloud cost optimization, unified network administration, and automated disaster recovery.',
     iconName: 'Cloud',
+    imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1600&q=80',
+    diagramUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80',
+    accentType: 'cyan', // Akasha Cyan: Data vis, telemetry, infographics
     businessChallenges: [
       'Unplanned server outages and sluggish network performance degrading client trust.',
       'Opaque, spiraling monthly cloud bills across AWS and Microsoft Azure.',
@@ -95,10 +107,14 @@ export const SERVICES: ServiceItem[] = [
     slug: 'security-compliance',
     title: 'Security & Compliance',
     shortDescription: 'Enterprise cybersecurity frameworks, vulnerability assessments, penetration testing, and ISO 27001 / SOC 2 certification guidance.',
-    category: 'Security',
+    category: 'Cybersecurity',
     tagline: 'Defense-in-Depth Cybersecurity & Audit-Grade Governance.',
     heroSummary: 'Protect your enterprise from ransomware, data breaches, and regulatory liabilities with continuous vulnerability assessments, endpoint protection, and certified compliance roadmaps.',
     iconName: 'ShieldCheck',
+    imageUrl: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80',
+    diagramUrl: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=1000&q=80',
+    accentType: 'green', // Abundance Green on Ether White: Verified security & compliance success states
     businessChallenges: [
       'Escalating threats of ransomware and sophisticated spear-phishing attacks.',
       'Stringent vendor procurement demands requiring immediate ISO 27001 or SOC 2 certification.',
@@ -136,6 +152,10 @@ export const SERVICES: ServiceItem[] = [
     tagline: 'Modern, Scalable Enterprise Software & Web Applications.',
     heroSummary: 'We architect, engineer, and deploy high-performance custom software, cloud-native web platforms, and mobile apps built with clean code and robust architectural standards.',
     iconName: 'Code',
+    imageUrl: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1000&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80',
+    diagramUrl: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80',
+    accentType: 'sky', // Cygnusa Sky: Primary engineering identity
     businessChallenges: [
       'Monolithic legacy systems slowing down feature releases and buckling under user growth.',
       'Poorly architected codebases plagued by bugs, high technical debt, and fragile dependencies.',
@@ -169,10 +189,14 @@ export const SERVICES: ServiceItem[] = [
     slug: 'ai-automation',
     title: 'AI Integration & Automation',
     shortDescription: 'Practical enterprise AI solutions, custom LLM fine-tuning, intelligent process automation (RPA), and automated data pipelines.',
-    category: 'Innovation',
+    category: 'Applied AI',
     tagline: 'Pragmatic AI & Intelligent Automation for Business Operations.',
     heroSummary: 'Move beyond AI hype. We build and integrate secure, private AI agents, automated workflow pipelines, and predictive analytics that reduce operational overhead.',
     iconName: 'Cpu',
+    imageUrl: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1000&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1600&q=80',
+    diagramUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80',
+    accentType: 'cyan', // Akasha Cyan: Data vis, neural diagrams, infographics
     businessChallenges: [
       'Employees bogged down in repetitive, manual data entry and document reconciliation.',
       'Data locked in fragmented, unstructured formats (PDFs, contracts, legacy databases).',
@@ -206,10 +230,14 @@ export const SERVICES: ServiceItem[] = [
     slug: 'staff-augmentation',
     title: 'Staff Augmentation',
     shortDescription: 'Dedicated senior engineers, architects, and DevOps specialists integrated directly into your agile sprints within 48 hours.',
-    category: 'Talent',
+    category: 'Engineering Talent',
     tagline: 'Vetted Senior Tech Talent. Seamless Agile Integration.',
     heroSummary: 'Rapidly scale your development capacity with pre-vetted senior software engineers, DevOps experts, and QA specialists who work directly within your team.',
     iconName: 'Users',
+    imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80',
+    diagramUrl: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1000&q=80',
+    accentType: 'sky', // Cygnusa Sky: Primary talent identity
     businessChallenges: [
       'Critical hiring delays holding back product roadmaps and strategic deadlines.',
       'Prohibitive recruiter fees and lengthy onboarding ramps for hard-to-find senior skillsets.',
@@ -243,10 +271,14 @@ export const SERVICES: ServiceItem[] = [
     slug: 'offshore-development-center',
     title: 'Offshore Capability Development Center (ODC)',
     shortDescription: 'Establish your own dedicated, branded offshore engineering center in India with complete operational, legal, and HR governance.',
-    category: 'Scale',
+    category: 'Global Delivery',
     tagline: 'Your Dedicated Offshore Engineering & Innovation Hub.',
     heroSummary: 'We build, staff, and manage high-performing dedicated engineering centers in Chennai and Guwahati, giving global tech firms 100% intellectual property control with up to 60% operational cost savings.',
     iconName: 'Building2',
+    imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80',
+    diagramUrl: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1000&q=80',
+    accentType: 'sky', // Cygnusa Sky: Primary global delivery identity
     businessChallenges: [
       'Exploding engineering payroll in North America, Europe, and Australia.',
       'Unsatisfactory quality and high turnover from transactional offshore outsourcing vendors.',
@@ -280,10 +312,14 @@ export const SERVICES: ServiceItem[] = [
     slug: 'software-hardware-reseller',
     title: 'Software & Hardware Reseller',
     shortDescription: 'Authorized Tier-1 licensing, procurement, and volume enterprise pricing for Microsoft, AWS, Cisco, Dell, Lenovo, and cybersecurity software.',
-    category: 'Procurement',
+    category: 'Enterprise Procurement',
     tagline: 'Authorized Tier-1 Licensing, Hardware & Cloud Procurement.',
     heroSummary: 'Streamline your IT procurement. As an authorized tier-1 reseller and solutions partner, CYGNUSA delivers optimal enterprise pricing, consolidated billing, and expert deployment support.',
     iconName: 'ShoppingBag',
+    imageUrl: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1000&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=1600&q=80',
+    diagramUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80',
+    accentType: 'gold', // Solar Gold on Void: Highlights, partner awards, alt CTAs
     businessChallenges: [
       'Fragmented billing across dozens of software vendors with conflicting renewal cycles.',
       'Paying full retail prices for Microsoft 365, Azure, AWS, and enterprise cybersecurity licenses.',

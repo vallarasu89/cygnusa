@@ -159,15 +159,15 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-cygnusa-mist">
               <li className="flex items-center gap-1.5 text-cygnusa-void font-semibold">
-                <ShieldCheck className="w-3.5 h-3.5 text-cygnusa-sky" />
+                <ShieldCheck className="w-3.5 h-3.5 text-cygnusa-green" />
                 <span>ISO/IEC 27001:2022</span>
               </li>
               <li className="flex items-center gap-1.5 text-cygnusa-void font-semibold">
-                <ShieldCheck className="w-3.5 h-3.5 text-cygnusa-sky" />
+                <ShieldCheck className="w-3.5 h-3.5 text-cygnusa-green" />
                 <span>ISO 20000-1:2018</span>
               </li>
               <li className="flex items-center gap-1.5 text-cygnusa-void font-semibold">
-                <ShieldCheck className="w-3.5 h-3.5 text-cygnusa-sky" />
+                <ShieldCheck className="w-3.5 h-3.5 text-cygnusa-green" />
                 <span>ISO 9001:2015</span>
               </li>
               <li>

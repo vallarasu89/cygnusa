@@ -1,14 +1,26 @@
 :root {
-  /* CYGNUSA Brand Tokens */
-  --color-cygnusa-sky: #0EA5E9;
-  --color-cygnusa-sky-hover: #0284C7;
-  --color-cosmic-deep: #0ea5e9;
-  --color-void-black: #0F172A;
-  --color-ether-white: #F8FAFC;
-  --color-silver-mist: #64748B;
-  --color-abundance-green: #10B981;
-  --color-surface-white: #FFFFFF;
-  --color-border-subtle: #E2E8F0;
+  /* CYGNUSA Primary Brand Tokens (30% / Main Identity) */
+  --color-cygnusa-sky: #0EA5E9;       /* Primary buttons, links, active states */
+  --color-cygnusa-sky-hover: #0284C7; /* Interactive hover state */
+  --color-cosmic-deep: #1E3A8A;       /* Cosmic Deep / Indigo for structure and depth */
+  --color-cosmic-navy: #0A1E4A;       /* Deep enterprise container background */
+  --color-void-black: #0F172A;        /* Void Black: primary typography & dark sections */
+
+  /* Secondary Neutrals & Surfaces (60% Neutral Canvas) */
+  --color-ether-white: #F0F9FF;       /* Ether White: primary neutral canvas */
+  --color-ether-slate: #F8FAFC;       /* Secondary neutral slate */
+  --color-surface-white: #FFFFFF;     /* Elevated card surfaces */
+  --color-silver-mist: #64748B;       /* Silver Mist: secondary text */
+  --color-mist-light: #94A3B8;        /* Muted metadata */
+  --color-border-subtle: #E2E8F0;     /* Subtle border */
+
+  /* Secondary Semantic */
+  --color-abundance-green: #10B981;   /* Success states, verification, uptime SLAs */
+
+  /* Complementary Palette (10% Single Accent per composition - Brand Guidelines Page 7) */
+  --color-solar-gold: #F59E0B;        /* Solar Gold: Important highlights, awards, alt CTAs */
+  --color-crown-violet: #7C3AED;      /* Crown Violet: Premium & enterprise, used sparingly */
+  --color-akasha-cyan: #06B6D4;       /* Akasha Cyan: Data visualizations, charts, infographic accents */
 
   /* Typography */
   --font-heading: 'Poppins', sans-serif;

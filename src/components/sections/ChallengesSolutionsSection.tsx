@@ -143,16 +143,16 @@ export const ChallengesSolutionsSection: React.FC = () => {
   const activeSolution = solutions.find((s) => s.id === activeId) || solutions[0];
 
   return (
-    <section className="bg-cygnusa-surface py-20 md:py-28 border-b border-cygnusa-border">
+    <section className="bg-white py-20 md:py-28 border-b border-cygnusa-border">
       <Container>
         {/* ============================================================ */}
         {/* SECTION HEADER (Hitachi Vantara Reference Style)             */}
         {/* ============================================================ */}
         <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
-          <span className="text-sm font-semibold text-slate-800 tracking-tight block mb-2">
+          <span className="text-sm font-semibold text-cygnusa-cosmic tracking-tight block mb-2 font-heading">
             We build customer-first
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold font-heading text-slate-950 tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold font-heading text-cygnusa-void tracking-tight leading-tight">
             Your challenges drive our solutions
           </h2>
         </div>
@@ -212,7 +212,7 @@ export const ChallengesSolutionsSection: React.FC = () => {
               </div>
 
               {/* Bottom Card: Deep Cosmic Enterprise Testimonial (CYGNUSA Brand Palette) */}
-              <div className="rounded-2xl p-5 sm:p-6 bg-gradient-to-r from-[#0F172A] via-[#0ea5e9] to-[#0A1128] text-white shadow-md border border-slate-800 relative overflow-hidden">
+              <div className="rounded-2xl p-5 sm:p-6 bg-gradient-to-br from-cygnusa-cosmic to-cygnusa-cosmic-navy text-white shadow-md border border-blue-900/40 relative overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeSolution.id}
@@ -280,7 +280,7 @@ export const ChallengesSolutionsSection: React.FC = () => {
                           </p>
                           <a
                             href={item.ctaHref}
-                            className="inline-flex items-center gap-2 px-5 py-2 rounded-full border-2 border-cygnusa-cosmic text-cygnusa-sky hover:bg-cygnusa-sky hover:text-white font-semibold text-xs sm:text-[13px] transition-all duration-150 group shadow-sm"
+                            className="inline-flex items-center gap-2 px-5 py-2 rounded-full border-2 border-cygnusa-sky text-cygnusa-sky hover:bg-cygnusa-sky hover:text-white font-semibold text-xs sm:text-[13px] transition-all duration-150 group shadow-sm"
                           >
                             <span>{item.ctaText}</span>
                             <span className="transition-transform duration-150 group-hover:translate-x-1">

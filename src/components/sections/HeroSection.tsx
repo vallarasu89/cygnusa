@@ -81,8 +81,9 @@ export const HeroSection: React.FC = () => {
       <Container className="relative z-10">
         {/* Top Centered Hero Content */}
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-slate-100 uppercase tracking-wider">
-            Enterprise Technology &amp; Cloud Infrastructure
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-slate-100 uppercase tracking-wider">
+            <span className="w-2 h-2 rounded-full bg-cygnusa-gold animate-pulse" />
+            <span>Enterprise Technology &amp; Cloud Infrastructure</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold font-heading tracking-tight leading-[1.12] text-white drop-shadow-sm">
@@ -94,7 +95,7 @@ export const HeroSection: React.FC = () => {
             Unified technology, global cybersecurity, and pragmatic AI innovation engineered for fast-growing SMBs and forward-thinking enterprises.
           </p>
 
-          <div className="pt-2 flex items-center justify-center gap-4">
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
             <Button
               href="/services"
               variant="outline"
@@ -102,6 +103,14 @@ export const HeroSection: React.FC = () => {
               className="rounded-full border-white/40 text-white bg-slate-900/60 backdrop-blur-sm hover:bg-white hover:text-cygnusa-void px-8 py-3 text-sm font-semibold transition-all shadow-md"
             >
               Explore the platform
+            </Button>
+            <Button
+              href="/contact"
+              variant="primary"
+              size="lg"
+              className="rounded-full bg-cygnusa-gold hover:bg-amber-500 text-slate-950 px-8 py-3 text-sm font-bold transition-all shadow-lg"
+            >
+              Book a Consultation
             </Button>
           </div>
         </div>

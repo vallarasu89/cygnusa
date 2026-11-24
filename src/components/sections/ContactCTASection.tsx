@@ -5,20 +5,20 @@ import { Mail, Phone } from 'lucide-react';
 
 export const ContactCTASection: React.FC = () => {
   return (
-    <section className="bg-white py-20 md:py-28 border-b border-cygnusa-border relative overflow-hidden">
+    <section className="bg-cygnusa-ether py-20 md:py-28 border-b border-cygnusa-border relative overflow-hidden">
       {/* Subtle neutral lighting accent */}
       <div
-        className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-slate-100/60 to-transparent pointer-events-none"
+        className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-white/70 to-transparent pointer-events-none"
         aria-hidden="true"
       />
 
       <Container className="relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-5xl mx-auto">
           <div className="space-y-3 text-center md:text-left">
-            <span className="text-sm font-semibold text-slate-800 tracking-tight block mb-2 font-sans">
+            <span className="text-sm font-semibold text-cygnusa-cosmic tracking-tight block mb-2 font-heading">
               Start a conversation
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold font-heading text-slate-950 tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold font-heading text-cygnusa-void tracking-tight leading-tight">
               Ready to give it a try?
             </h2>
             <p className="text-sm sm:text-base text-slate-600 font-sans max-w-xl leading-relaxed">

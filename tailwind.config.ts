@@ -9,18 +9,30 @@ const config: Config = {
     extend: {
       colors: {
         cygnusa: {
-          sky: '#0EA5E9',       // Primary buttons, links, active states
-          'sky-hover': '#0284C7', // Hover state
-          'sky-light': '#F1F5F9', // Subtle neutral slate
-          cosmic: '#0ea5e9',    // Headings and emphasis
-          'cosmic-dark': '#172554',
-          void: '#0F172A',      // Main typography & dark elements
-          ether: '#F8FAFC',     // Neutral slate surface backgrounds
-          mist: '#64748B',      // Secondary text
-          'mist-light': '#94A3B8',
-          green: '#10B981',     // Positive highlights & metrics
-          surface: '#F8FAFC',
-          border: '#E2E8F0',
+          // Primary Brand Colors (30% / Main Identity)
+          sky: '#0EA5E9',          // Primary brand identity, buttons, links, active states
+          'sky-hover': '#0284C7',    // Interactive hover state
+          'sky-light': '#F0F9FF',    // Ether White tint
+          cosmic: '#1E3A8A',       // Cosmic Deep / Indigo for structure and depth
+          'cosmic-deep': '#1E3A8A',// Official Cosmic Deep
+          'cosmic-navy': '#0A1E4A',// Deep enterprise container background
+          void: '#0F172A',         // Void Black: primary typography & dark sections
+          
+          // Secondary Neutrals & Surfaces (60%)
+          ether: '#F0F9FF',        // Ether White: official neutral canvas (60%)
+          'ether-slate': '#F8FAFC',// Secondary surface slate
+          mist: '#64748B',         // Silver Mist: secondary text
+          'mist-light': '#94A3B8',  // Muted metadata
+          surface: '#FFFFFF',      // Pure white card surfaces
+          border: '#E2E8F0',       // Subtle border
+          
+          // Secondary Semantic
+          green: '#10B981',        // Abundance Green: success states, verification, SLAs
+          
+          // Complementary Palette (10% Single Accent per composition - Brand Guidelines Page 7)
+          gold: '#F59E0B',         // Solar Gold: Important highlights, awards, alt CTAs
+          violet: '#7C3AED',       // Crown Violet: Premium & enterprise, used sparingly
+          cyan: '#06B6D4',         // Akasha Cyan: Data visualizations, charts, infographic accents
         },
       },
       fontFamily: {

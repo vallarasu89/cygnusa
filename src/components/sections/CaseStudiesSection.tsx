@@ -59,15 +59,15 @@ export const CaseStudiesSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-cygnusa-surface py-20 md:py-28 border-b border-cygnusa-border">
+    <section className="bg-cygnusa-ether py-20 md:py-28 border-b border-cygnusa-border">
       <Container>
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14">
           <div className="max-w-2xl">
-            <span className="text-sm font-semibold text-slate-800 tracking-tight block mb-2 font-sans">
+            <span className="text-sm font-semibold text-cygnusa-cosmic tracking-tight block mb-2 font-heading">
               Client proof &amp; verified outcomes
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold font-heading text-slate-950 tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold font-heading text-cygnusa-void tracking-tight leading-tight">
               Real-world engineering. Verified impact.
             </h2>
           </div>
@@ -142,7 +142,7 @@ export const CaseStudiesSection: React.FC = () => {
                   <div className="grid grid-cols-3 gap-3 sm:gap-4 p-4 bg-slate-50/90 rounded-xl border border-slate-200/80">
                     {currentCase.metrics.map((m, idx) => (
                       <div key={idx} className="space-y-0.5">
-                        <span className="block text-xl sm:text-2xl font-bold font-heading text-cygnusa-cosmic tracking-tight">
+                        <span className="block text-xl sm:text-2xl font-bold font-heading text-cygnusa-green tracking-tight">
                           {m.value}
                         </span>
                         <span className="text-[11px] sm:text-xs text-slate-600 font-sans block leading-tight">
@@ -154,13 +154,13 @@ export const CaseStudiesSection: React.FC = () => {
 
                   {/* Key Outcomes List */}
                   <div className="space-y-2 pt-1">
-                    <span className="text-xs font-semibold text-slate-900 block font-heading">
+                    <span className="text-xs font-semibold text-cygnusa-void block font-heading">
                       Verified Business Impact:
                     </span>
                     <ul className="space-y-2">
                       {currentCase.impact.slice(0, 3).map((item, idx) => (
                         <li key={idx} className="flex items-start gap-2.5 text-xs text-slate-600 font-sans leading-relaxed">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-4 h-4 text-cygnusa-green shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </li>
                       ))}

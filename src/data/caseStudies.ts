@@ -12,6 +12,7 @@ export interface CaseStudyItem {
   technologiesUsed: string[];
   metrics: { label: string; value: string }[];
   featured: boolean;
+  imageUrl?: string;
 }
 
 export const CASE_STUDIES: CaseStudyItem[] = [

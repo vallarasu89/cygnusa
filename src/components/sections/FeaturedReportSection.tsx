@@ -20,8 +20,8 @@ export const FeaturedReportSection: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-5">
-              <span className="text-xs font-semibold tracking-wider text-cygnusa-sky uppercase block">
-                SPECIAL EXECUTIVE RESEARCH REPORT
+              <span className="text-xs font-bold tracking-wider text-cygnusa-gold uppercase block font-heading">
+                ★ SPECIAL EXECUTIVE RESEARCH REPORT
               </span>
 
               <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold font-heading text-white tracking-tight leading-tight">
@@ -37,13 +37,13 @@ export const FeaturedReportSection: React.FC = () => {
                   href="/insights/why-growing-smbs-need-virtual-cto-2026"
                   variant="primary"
                   size="md"
-                  className="rounded-full bg-cygnusa-sky hover:bg-cygnusa-sky-hover text-white px-7 font-semibold text-xs tracking-wider"
+                  className="rounded-full bg-cygnusa-gold hover:bg-amber-500 text-slate-950 px-7 font-bold text-xs tracking-wider shadow-md transition-all"
                 >
                   Read the Report
                 </Button>
                 <a
                   href="/contact"
-                  className="text-xs font-semibold text-slate-300 hover:text-white inline-flex items-center gap-1.5"
+                  className="text-xs font-semibold text-slate-300 hover:text-cygnusa-gold transition-colors inline-flex items-center gap-1.5"
                 >
                   <Download className="w-3.5 h-3.5" />
                   <span>Download Executive Summary (PDF)</span>
@@ -56,8 +56,8 @@ export const FeaturedReportSection: React.FC = () => {
               <div className="w-64 sm:w-72 bg-white text-cygnusa-void rounded-xl p-6 shadow-2xl border border-slate-700 space-y-4">
                 <div className="flex items-center justify-between pb-3 border-b border-cygnusa-border">
                   <div className="flex items-center gap-2">
-                    <FileText className="w-5 h-5 text-cygnusa-sky" />
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-cygnusa-sky font-heading">
+                    <FileText className="w-5 h-5 text-cygnusa-gold" />
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-cygnusa-gold font-heading">
                       CYGNUSA RESEARCH
                     </span>
                   </div>
@@ -72,7 +72,7 @@ export const FeaturedReportSection: React.FC = () => {
                     loading="lazy"
                   />
                   <div className="relative z-10">
-                    <span className="text-[10px] font-semibold text-sky-300 uppercase tracking-wider">EXECUTIVE BRIEFING</span>
+                    <span className="text-[10px] font-semibold text-amber-300 uppercase tracking-wider">EXECUTIVE BRIEFING</span>
                     <h4 className="text-xs font-bold font-heading leading-tight mt-1">
                       The Modern Cloud &amp; AI Blueprint
                     </h4>
@@ -83,7 +83,7 @@ export const FeaturedReportSection: React.FC = () => {
                   24 pages of benchmark data, cloud FinOps frameworks, and ISO compliance roadmaps.
                 </p>
 
-                <div className="pt-2 border-t border-cygnusa-border flex items-center justify-between text-[11px] font-semibold text-cygnusa-sky">
+                <div className="pt-2 border-t border-cygnusa-border flex items-center justify-between text-[11px] font-bold text-cygnusa-gold">
                   <span>UNRESTRICTED ACCESS</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </div>

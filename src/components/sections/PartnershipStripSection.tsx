@@ -6,8 +6,11 @@ export const PartnershipStripSection: React.FC = () => {
   return (
     <section className="bg-white py-12 border-b border-cygnusa-border">
       <Container>
-        <div className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 rounded-[12px] p-8 sm:p-10 shadow-xl border border-slate-800 text-white flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="space-y-1 text-center sm:text-left">
+        <div className="bg-gradient-to-r from-slate-950 via-[#1a0f30] to-slate-950 rounded-[12px] p-8 sm:p-10 shadow-xl border border-purple-900/40 text-white flex flex-col sm:flex-row items-center justify-between gap-6 relative overflow-hidden">
+          <div className="space-y-2 text-center sm:text-left">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cygnusa-violet text-white text-[10px] font-bold uppercase tracking-wider font-heading">
+              <span>TIER-1 ENTERPRISE ALLIANCE</span>
+            </div>
             <h3 className="text-xl sm:text-2xl font-bold font-heading text-white tracking-tight">
               Partnerships that drive enterprise velocity
             </h3>
@@ -21,7 +24,7 @@ export const PartnershipStripSection: React.FC = () => {
               href="/contact"
               variant="outline"
               size="md"
-              className="rounded-full bg-white text-slate-900 hover:bg-slate-100 hover:text-cygnusa-sky border-none font-semibold text-xs px-6 shadow-sm transition-colors"
+              className="rounded-full bg-white text-cygnusa-void hover:bg-purple-50 hover:text-cygnusa-violet hover:border-purple-300 border border-white font-semibold text-xs px-6 shadow-sm transition-all duration-200"
             >
               Explore Partnerships
             </Button>

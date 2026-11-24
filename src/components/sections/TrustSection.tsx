@@ -222,10 +222,10 @@ export const TrustSection: React.FC = () => {
         <div className="lg:hidden">
           {/* Centered Headline on Mobile */}
           <div className="max-w-md mx-auto text-center mb-8">
-            <span className="block text-xs sm:text-sm font-semibold text-slate-800 tracking-tight mb-2">
+            <span className="block text-xs sm:text-sm font-semibold text-cygnusa-cosmic tracking-tight mb-2">
               Trust isn't given, it's earned
             </span>
-            <h2 className="text-xl sm:text-2xl font-bold font-heading text-slate-950 tracking-tight leading-snug">
+            <h2 className="text-xl sm:text-2xl font-bold font-heading text-cygnusa-void tracking-tight leading-snug">
               The world's biggest brands rely on can't-fail sustainable infrastructure.
             </h2>
           </div>
