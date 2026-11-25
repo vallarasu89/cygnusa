@@ -9,12 +9,16 @@ interface MegaMenuProps {
   activeNavItem: NavItem;
   isOpen: boolean;
   onClose: () => void;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
 
 export const MegaMenu: React.FC<MegaMenuProps> = ({
   activeNavItem,
   isOpen,
   onClose,
+  onMouseEnter,
+  onMouseLeave,
 }) => {
   const categories = activeNavItem.categories || [];
   const [activeCategoryId, setActiveCategoryId] = useState<string>(
@@ -69,6 +73,8 @@ export const MegaMenu: React.FC<MegaMenuProps> = ({
       exit={{ opacity: 0, y: -6, scaleY: 0.98 }}
       transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
       style={{ transformOrigin: 'top center' }}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
       className="absolute top-full left-0 w-full bg-white border-b border-cygnusa-border shadow-2xl z-50 overflow-hidden"
     >
       <div className="w-full max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-12 min-h-[420px]">

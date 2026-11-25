@@ -94,29 +94,31 @@ export const Services: React.FC = () => {
       <Breadcrumbs items={[{ label: 'Services' }]} />
 
       {/* Hero Header (60% Ether White Neutral Canvas) */}
-      <section className="bg-gradient-to-b from-[#F0F9FF] to-white py-16 md:py-24 border-b border-cygnusa-border relative overflow-hidden">
+      <section className="bg-gradient-to-b from-cygnusa-ether via-white to-white py-16 md:py-24 border-b border-cygnusa-border relative overflow-hidden">
         <div
           className="absolute -top-24 right-0 w-96 h-96 bg-cygnusa-sky/10 rounded-full blur-3xl pointer-events-none"
           aria-hidden="true"
         />
 
         <Container className="relative z-10">
-          <div className="max-w-3xl">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-cygnusa-sky mb-2 block">
-              // ENTERPRISE SERVICE PRACTICES
-            </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-cygnusa-void tracking-tight leading-tight">
-              Enterprise Technology Services
+          <div className="max-w-4xl space-y-5">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200/80 text-xs font-semibold text-cygnusa-sky font-heading uppercase tracking-wider">
+              <span className="w-2 h-2 rounded-full bg-cygnusa-sky" />
+              <span>Enterprise Service Practices</span>
+            </div>
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold font-heading text-cygnusa-void tracking-tight leading-[1.12]">
+              Enterprise Technology <br />
+              <span className="text-cygnusa-sky">Engineered to Scale</span>
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-cygnusa-mist font-sans leading-relaxed">
+            <p className="text-base sm:text-lg text-cygnusa-mist font-sans leading-relaxed max-w-3xl">
               We deliver structured technology consulting, modern software engineering, and 24/7 managed infrastructure operations tailored to fast-growth SMBs and established enterprises worldwide.
             </p>
           </div>
 
-          {/* Key Value Strip */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 pt-8 border-t border-slate-200">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-cygnusa-sky shadow-sm">
+          {/* Key Value Strip with Meaningful Multi-Brand Colour Distribution */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 pt-8 border-t border-slate-200">
+            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+              <div className="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center text-cygnusa-green shadow-sm shrink-0">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div>
@@ -125,8 +127,8 @@ export const Services: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-cygnusa-sky shadow-sm">
+            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+              <div className="w-10 h-10 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center text-cygnusa-cosmic shadow-sm shrink-0">
                 <Zap className="w-5 h-5" />
               </div>
               <div>
@@ -135,8 +137,8 @@ export const Services: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-cygnusa-sky shadow-sm">
+            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+              <div className="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center text-cygnusa-sky shadow-sm shrink-0">
                 <Server className="w-5 h-5" />
               </div>
               <div>
@@ -145,8 +147,8 @@ export const Services: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-cygnusa-sky shadow-sm">
+            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+              <div className="w-10 h-10 rounded-lg bg-purple-50 border border-purple-100 flex items-center justify-center text-cygnusa-violet shadow-sm shrink-0">
                 <Layers className="w-5 h-5" />
               </div>
               <div>
@@ -196,7 +198,7 @@ export const Services: React.FC = () => {
                 <div
                   key={service.id}
                   id={service.slug}
-                  className="bg-white border border-cygnusa-border rounded-xl shadow-card overflow-hidden hover:border-cygnusa-sky/60 hover:shadow-lg transition-all duration-300 group"
+                  className="bg-white border border-cygnusa-border rounded-xl shadow-card overflow-hidden hover:border-cygnusa-sky/60 hover:shadow-lg transition-all duration-300 group scroll-mt-28"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
                     {/* Visual Media Column (5 cols) */}

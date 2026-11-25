@@ -59,7 +59,8 @@ export const CaseStudiesSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-cygnusa-ether py-20 md:py-28 border-b border-cygnusa-border">
+    <section id="case-studies" className="bg-cygnusa-ether py-20 md:py-28 border-b border-cygnusa-border scroll-mt-24 relative">
+      <div id="section-case-studies" className="scroll-mt-24" />
       <Container>
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14">

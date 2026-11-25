@@ -710,7 +710,9 @@ export const InteractiveGlobe3D: React.FC = () => {
 
 export const InteractiveGlobeSection: React.FC = () => {
   return (
-    <section id="global-presence" className="bg-white py-20 md:py-28 border-b border-cygnusa-border overflow-hidden">
+    <section id="global-presence" className="bg-white py-20 md:py-28 border-b border-cygnusa-border overflow-hidden scroll-mt-24 relative">
+      <div id="section-global" className="scroll-mt-24" />
+      <div id="global" className="scroll-mt-24" />
       <Container>
         <InteractiveGlobe3D />
       </Container>

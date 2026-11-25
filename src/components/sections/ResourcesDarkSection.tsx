@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container } from '@/components/layout/Container';
-import { ArrowRight, ShieldAlert, Cpu, Server } from 'lucide-react';
+import { ArrowRight, ShieldAlert, Server } from 'lucide-react';
 
 export const ResourcesDarkSection: React.FC = () => {
   const resourceCards = [
@@ -25,17 +25,18 @@ export const ResourcesDarkSection: React.FC = () => {
     },
     {
       id: 'res-3',
-      tag: 'ENTERPRISE AI ADOPTION',
-      title: 'Private Enterprise RAG: Practical Knowledge Retrieval Without Cloud Leaks',
-      description: 'Why self-hosted vector databases and private models are becoming the default standard for regulated operations.',
-      href: '/insights/practical-ai-integration-operations',
-      icon: Cpu,
-      image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80',
+      tag: 'BUSINESS CONTINUITY & RESILIENCE',
+      title: 'Zero-Downtime High Availability: Multi-Region Disaster Recovery Architecture',
+      description: 'Proven active-passive and active-active clustering patterns ensuring business continuity and sub-minute recovery time objectives (RTO).',
+      href: '/insights/cloud-finops-tco-calculator-template',
+      icon: Server,
+      image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80',
     },
   ];
 
   return (
-    <section className="bg-cygnusa-void text-white py-20 md:py-28 border-b border-slate-800">
+    <section id="resources" className="bg-cygnusa-void text-white py-20 md:py-28 border-b border-slate-800 scroll-mt-24 relative">
+      <div id="section-resources" className="scroll-mt-24" />
       <Container>
         {/* Centered Heading */}
         <div className="max-w-3xl mx-auto text-center space-y-2 mb-14">

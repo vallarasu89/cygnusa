@@ -11,7 +11,7 @@ export const FeaturedReportSection: React.FC = () => {
           {/* Real Global Infrastructure Texture Backdrop */}
           <img
             src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80"
-            alt="CYGNUSA Global Cloud & AI Research"
+            alt="CYGNUSA Global Enterprise Cloud & IT Research"
             className="absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.25] pointer-events-none"
             loading="lazy"
           />
@@ -25,11 +25,11 @@ export const FeaturedReportSection: React.FC = () => {
               </span>
 
               <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold font-heading text-white tracking-tight leading-tight">
-                The Rise of the Virtual CTO &amp; Unified Cloud Architecture for SMBs
+                The Rise of the Virtual CTO &amp; Unified Cloud Architecture for Mid-Market Enterprises
               </h2>
 
               <p className="text-sm sm:text-base text-slate-300 font-sans leading-relaxed">
-                Discover how forward-thinking mid-market companies are navigating multi-cloud sprawl, implementing ISO 27001 zero-trust controls, and adopting pragmatic AI without hiring full-time $250k+ C-suite executives.
+                Discover how forward-thinking companies are eliminating cloud sprawl, implementing ISO 27001 zero-trust controls, and scaling mission-critical systems without hiring full-time $250k+ C-suite executives.
               </p>
 
               <div className="pt-3 flex flex-wrap items-center gap-4">
@@ -74,7 +74,7 @@ export const FeaturedReportSection: React.FC = () => {
                   <div className="relative z-10">
                     <span className="text-[10px] font-semibold text-amber-300 uppercase tracking-wider">EXECUTIVE BRIEFING</span>
                     <h4 className="text-xs font-bold font-heading leading-tight mt-1">
-                      The Modern Cloud &amp; AI Blueprint
+                      The Modern Cloud &amp; Virtual CTO Blueprint
                     </h4>
                   </div>
                 </div>

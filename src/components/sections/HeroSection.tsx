@@ -7,12 +7,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import heroBannerBg from '@/assets/images/Iinformation-technology.jpg';
 
 export const HeroSection: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'cloud' | 'security' | 'engineering' | 'ai'>('cloud');
+  const [activeTab, setActiveTab] = useState<'cloud' | 'security' | 'engineering' | 'advisory'>('cloud');
 
   const tabContent = {
     cloud: {
       tag: 'HYBRID CLOUD & INFRASTRUCTURE',
-      title: 'Powering Multi-Cloud & Unified Infrastructure for AI',
+      title: 'High-Availability Multi-Cloud & Enterprise Infrastructure',
       description:
         'Deliver 99.9% uptime and bulletproof reliability with proactive 24/7 monitoring, FinOps cloud cost optimization across AWS, Azure and GCP, and automated multi-region disaster recovery.',
       ctaText: 'Discover Cloud Architecture',
@@ -43,20 +43,20 @@ export const HeroSection: React.FC = () => {
       ctaHref: '/services/software-engineering',
       pillText: 'Software Engineering',
       pillHref: '/services/software-engineering',
-      image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80',
-      alt: 'CYGNUSA Modular High-Density Compute Node Chassis',
+      image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
+      alt: 'CYGNUSA Mission-Critical Systems Engineering Chassis',
     },
-    ai: {
-      tag: 'PRAGMATIC AI & AUTOMATION',
-      title: 'Operationalizing Secure Private Enterprise AI',
+    advisory: {
+      tag: 'STRATEGIC IT ADVISORY',
+      title: 'Executive Technology Leadership & Architecture Governance',
       description:
-        'Move past generative AI hype. Deploy private Retrieval-Augmented Generation (RAG) knowledge assistants, automated document OCR, and workflow orchestrations that protect corporate data.',
-      ctaText: 'Explore AI Solutions',
-      ctaHref: '/services/ai-automation',
-      pillText: 'Enterprise AI Solutions',
-      pillHref: '/services/ai-automation',
-      image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80',
-      alt: 'CYGNUSA Neural AI Tensor Accelerator Server Unit',
+        'Bridge business strategy and engineering execution. Access fractional Virtual CTO leadership for multi-cloud roadmaps, enterprise vendor governance, and ISO 27001 readiness without C-suite overhead.',
+      ctaText: 'Explore Virtual CTO Advisory',
+      ctaHref: '/services/virtual-cto',
+      pillText: 'Virtual CTO Advisory',
+      pillHref: '/services/virtual-cto',
+      image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80',
+      alt: 'CYGNUSA Virtual CTO Strategic Architecture Advisory Session',
     },
   };
 
@@ -92,7 +92,7 @@ export const HeroSection: React.FC = () => {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-200 font-sans max-w-2xl mx-auto leading-relaxed drop-shadow">
-            Unified technology, global cybersecurity, and pragmatic AI innovation engineered for fast-growing SMBs and forward-thinking enterprises.
+            Mission-critical cloud infrastructure, audit-ready cybersecurity, and strategic technology leadership engineered for fast-growing mid-market enterprises.
           </p>
 
           <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
@@ -128,7 +128,7 @@ export const HeroSection: React.FC = () => {
                 { id: 'cloud', label: 'Multi-Cloud & Infrastructure' },
                 { id: 'security', label: 'Cybersecurity & ISO 27001' },
                 { id: 'engineering', label: 'Software Engineering' },
-                { id: 'ai', label: 'AI & Automation' },
+                { id: 'advisory', label: 'Virtual CTO & IT Advisory' },
               ].map((tab) => {
                 const isActive = activeTab === tab.id;
                 return (

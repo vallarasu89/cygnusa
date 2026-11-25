@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MegaMenuCategory } from '@/data/navigation';
 import { ArrowRight } from 'lucide-react';
+import { handleSectionLinkNavigation } from '@/lib/scrollUtils';
 
 interface MegaMenuFeatureCardProps {
   card: MegaMenuCategory['featureCard'];
@@ -12,6 +13,10 @@ export const MegaMenuFeatureCard: React.FC<MegaMenuFeatureCardProps> = ({
   card,
   onLinkClick,
 }) => {
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    handleSectionLinkNavigation(e, href, onLinkClick);
+  };
+
   return (
     <div className="w-full h-full bg-slate-50/60 p-6 lg:p-8 flex flex-col justify-start">
       <div className="bg-white border border-cygnusa-border rounded-[8px] overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-200 flex flex-col h-full">
@@ -43,7 +48,7 @@ export const MegaMenuFeatureCard: React.FC<MegaMenuFeatureCardProps> = ({
           <div className="mt-5 pt-3 border-t border-cygnusa-border/60">
             <Link
               to={card.linkHref}
-              onClick={onLinkClick}
+              onClick={(e) => handleLinkClick(e, card.linkHref)}
               className="inline-flex items-center gap-1.5 text-xs font-semibold text-cygnusa-sky hover:text-cygnusa-sky-hover transition-colors group"
             >
               <span>{card.linkText}</span>

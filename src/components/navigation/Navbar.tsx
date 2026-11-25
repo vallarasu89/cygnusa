@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { NAVIGATION_DATA, NavItem } from '@/data/navigation';
 import { MegaMenu } from './MegaMenu';
@@ -6,6 +6,7 @@ import { MobileNavigation } from './MobileNavigation';
 import { Search, Menu, ArrowRight, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { scrollToTargetElement } from '@/lib/scrollUtils';
 
 export const Navbar: React.FC = () => {
   const [activeMenuId, setActiveMenuId] = useState<string | null>(null);
@@ -13,6 +14,7 @@ export const Navbar: React.FC = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Page Scroll Progress Bar (Hitachi Vantara Reference)
   const { scrollYProgress } = useScroll();
@@ -38,13 +40,46 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (item: NavItem) => {
-    setActiveMenuId((prev) => (prev === item.id ? null : item.id));
+  const handleMouseEnter = (itemId: string) => {
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+    setActiveMenuId(itemId);
+  };
+
+  const handleMouseLeave = () => {
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+    hoverTimeoutRef.current = setTimeout(() => {
+      setActiveMenuId(null);
+    }, 220);
+  };
+
+  const handleNavClick = (e: React.MouseEvent, item: NavItem) => {
+    setActiveMenuId(null);
+    const isHome = location.pathname === '/' || location.pathname === '';
+    if (isHome) {
+      if (item.id === 'solutions') {
+        e.preventDefault();
+        scrollToTargetElement('solutions', true);
+        return;
+      }
+      if (item.id === 'why-cygnusa') {
+        e.preventDefault();
+        scrollToTargetElement('trust-section', true);
+        return;
+      }
+      if (item.id === 'insights') {
+        e.preventDefault();
+        scrollToTargetElement('insights', true);
+        return;
+      }
+    }
   };
 
   return (
     <>
-      <header className="sticky top-0 z-40 w-full bg-white transition-all duration-200 border-b border-cygnusa-border relative">
+      <header
+        onMouseLeave={handleMouseLeave}
+        className="sticky top-0 z-40 w-full bg-white transition-all duration-200 border-b border-cygnusa-border relative"
+      >
         <div
           className={cn(
             'w-full bg-white transition-all duration-200',
@@ -80,10 +115,14 @@ export const Navbar: React.FC = () => {
                 const hasSubNav = Boolean(item.categories && item.categories.length > 0);
 
                 return (
-                  <div key={item.id} className="relative h-full flex items-center">
-                    <button
-                      type="button"
-                      onClick={() => handleNavClick(item)}
+                  <div
+                    key={item.id}
+                    className="relative h-full flex items-center"
+                    onMouseEnter={() => handleMouseEnter(item.id)}
+                  >
+                    <Link
+                      to={item.href}
+                      onClick={(e) => handleNavClick(e, item)}
                       aria-expanded={isOpen}
                       aria-haspopup={hasSubNav}
                       className={cn(
@@ -102,7 +141,7 @@ export const Navbar: React.FC = () => {
                           )}
                         />
                       )}
-                    </button>
+                    </Link>
 
                     {/* Active Bottom Highlight Bar */}
                     {isActive && (
@@ -172,6 +211,10 @@ export const Navbar: React.FC = () => {
                 activeNavItem={activeNavItem}
                 isOpen={Boolean(activeMenuId)}
                 onClose={() => setActiveMenuId(null)}
+                onMouseEnter={() => {
+                  if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+                }}
+                onMouseLeave={handleMouseLeave}
               />
             </div>
           )}

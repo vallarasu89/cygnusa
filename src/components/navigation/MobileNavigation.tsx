@@ -4,6 +4,7 @@ import { NAVIGATION_DATA, NavItem } from '@/data/navigation';
 import { X, ChevronDown, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/common/Button';
 import { cn } from '@/lib/utils';
+import { handleSectionLinkNavigation } from '@/lib/scrollUtils';
 
 interface MobileNavigationProps {
   isOpen: boolean;
@@ -33,6 +34,10 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
       document.body.style.overflow = '';
     };
   }, [isOpen]);
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    handleSectionLinkNavigation(e, href, onClose);
+  };
 
   const toggleSection = (id: string) => {
     setExpandedNavId((prev) => (prev === id ? null : id));
@@ -101,7 +106,7 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
                             <Link
                               key={lIdx}
                               to={link.href}
-                              onClick={onClose}
+                              onClick={(e) => handleLinkClick(e, link.href)}
                               className="block py-1 text-sm text-cygnusa-mist hover:text-cygnusa-sky transition-colors"
                             >
                               {link.title}

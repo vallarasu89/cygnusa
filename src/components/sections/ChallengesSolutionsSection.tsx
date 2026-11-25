@@ -143,7 +143,8 @@ export const ChallengesSolutionsSection: React.FC = () => {
   const activeSolution = solutions.find((s) => s.id === activeId) || solutions[0];
 
   return (
-    <section className="bg-white py-20 md:py-28 border-b border-cygnusa-border">
+    <section id="solutions" className="bg-white py-20 md:py-28 border-b border-cygnusa-border scroll-mt-24 relative">
+      <div id="section-solutions" className="scroll-mt-24" />
       <Container>
         {/* ============================================================ */}
         {/* SECTION HEADER (Hitachi Vantara Reference Style)             */}

@@ -18,17 +18,23 @@ import { Contact } from '@/pages/Contact';
 import { PrivacyPolicy } from '@/pages/PrivacyPolicy';
 import { NotFound } from '@/pages/NotFound';
 
-// Automatically scroll to top on route change
+import { scrollToTargetElement } from '@/lib/scrollUtils';
+
+// Automatically scroll to top or target hash section on route change
 const ScrollToTop: React.FC = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'instant',
-    });
-  }, [pathname]);
+    if (hash) {
+      scrollToTargetElement(hash, true);
+    } else {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant',
+      });
+    }
+  }, [pathname, hash]);
 
   return null;
 };

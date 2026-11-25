@@ -5,8 +5,14 @@ import { INSIGHTS } from '@/data/insights';
 import { ArrowRight } from 'lucide-react';
 
 export const InsightsSection: React.FC = () => {
+  // Filter for high-impact enterprise advisory and infrastructure insights (no AI hype)
+  const enterpriseInsights = INSIGHTS.filter(
+    (item) => !item.tags.includes('AI Integration')
+  ).slice(0, 3);
+
   return (
-    <section className="bg-white py-20 md:py-28 border-b border-cygnusa-border">
+    <section id="insights" className="bg-white py-20 md:py-28 border-b border-cygnusa-border scroll-mt-24 relative">
+      <div id="section-insights" className="scroll-mt-24" />
       <Container>
         {/* Centered Heading: "This just in" */}
         <div className="max-w-3xl mx-auto text-center space-y-2 mb-14">
@@ -20,10 +26,10 @@ export const InsightsSection: React.FC = () => {
 
         {/* 3 Clean Vertical Cards with Real Photography on Top matching reference */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {INSIGHTS.slice(0, 3).map((item, idx) => {
+          {enterpriseInsights.map((item, idx) => {
             const realImages = [
               'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80',
-              'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80',
+              'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80',
               'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80',
             ];
 

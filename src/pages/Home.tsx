@@ -20,8 +20,8 @@ export const Home: React.FC = () => {
   return (
     <>
       <SEO
-        title="CYGNUSA Technologies | IT Consulting, Cloud, Security & AI Solutions"
-        description="CYGNUSA Technologies helps SMBs modernise, secure and scale their business through strategic IT consulting, managed IT services, cloud, cybersecurity, software engineering and AI solutions."
+        title="CYGNUSA Technologies | Enterprise IT Consulting, Cloud Infrastructure & Cybersecurity"
+        description="CYGNUSA Technologies helps mid-market businesses modernise, secure and scale through strategic IT consulting, Virtual CTO advisory, cloud infrastructure, cybersecurity and enterprise software engineering."
         canonical="https://www.cygnusa.in/"
         structuredData={homeStructuredData}
       />

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MegaMenuCategory } from '@/data/navigation';
 import { ArrowRight } from 'lucide-react';
+import { handleSectionLinkNavigation } from '@/lib/scrollUtils';
 
 interface MegaMenuContentProps {
   category: MegaMenuCategory;
@@ -12,6 +13,10 @@ export const MegaMenuContent: React.FC<MegaMenuContentProps> = ({
   category,
   onLinkClick,
 }) => {
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    handleSectionLinkNavigation(e, href, onLinkClick);
+  };
+
   return (
     <div className="w-full h-full bg-white p-6 lg:p-8 border-r border-cygnusa-border flex flex-col justify-start">
       {/* Category Heading & Description */}
@@ -30,7 +35,7 @@ export const MegaMenuContent: React.FC<MegaMenuContentProps> = ({
           <Link
             key={index}
             to={link.href}
-            onClick={onLinkClick}
+            onClick={(e) => handleLinkClick(e, link.href)}
             className="group block p-3 -mx-2 rounded-[6px] hover:bg-slate-50/80 transition-colors duration-150"
           >
             <div className="flex items-center justify-between text-sm font-bold text-cygnusa-void group-hover:text-cygnusa-sky transition-colors duration-150">

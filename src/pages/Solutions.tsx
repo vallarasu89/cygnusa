@@ -64,7 +64,7 @@ export const Solutions: React.FC = () => {
                 <div
                   key={sol.id}
                   id={sol.slug}
-                  className="bg-white border border-cygnusa-border rounded-[8px] p-8 md:p-10 shadow-card space-y-6"
+                  className="bg-white border border-cygnusa-border rounded-[8px] p-8 md:p-10 shadow-card space-y-6 scroll-mt-28"
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-[6px] bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-800 shrink-0">

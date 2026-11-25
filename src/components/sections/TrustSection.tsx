@@ -83,8 +83,10 @@ export const TrustSection: React.FC = () => {
   return (
     <section
       id="trust-section"
-      className="bg-white pt-60 sm:pt-72 lg:pt-80 pb-24 md:pb-32 border-b border-cygnusa-border relative overflow-hidden"
+      className="bg-white pt-60 sm:pt-72 lg:pt-80 pb-24 md:pb-32 border-b border-cygnusa-border relative overflow-hidden scroll-mt-24"
     >
+      <div id="section-trust" className="scroll-mt-24" />
+      <div id="trust" className="scroll-mt-24" />
       <Container className="relative">
         {/* ============================================================ */}
         {/* DESKTOP 360° CIRCULAR CONSTELLATION WITH PURE ORIGINAL IMAGES */}

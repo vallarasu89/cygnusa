@@ -495,7 +495,7 @@ export const TeamLanyardSection: React.FC = () => {
       {/* ========================================================================= */}
       {/* 1. SEPARATE OWNER / FOUNDER DEDICATED SECTION ("owner thani section")     */}
       {/* ========================================================================= */}
-      <section id="leadership" className="py-20 md:py-28 bg-white border-b border-cygnusa-border overflow-hidden">
+      <section id="leadership" className="py-20 md:py-28 bg-white border-b border-cygnusa-border overflow-hidden scroll-mt-28">
         <Container>
           {/* Section Header */}
           <div className="max-w-3xl mb-12 sm:mb-16">

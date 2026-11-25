@@ -5,7 +5,8 @@ import { Mail, Phone } from 'lucide-react';
 
 export const ContactCTASection: React.FC = () => {
   return (
-    <section className="bg-cygnusa-ether py-20 md:py-28 border-b border-cygnusa-border relative overflow-hidden">
+    <section id="contact" className="bg-cygnusa-ether py-20 md:py-28 border-b border-cygnusa-border relative overflow-hidden scroll-mt-24">
+      <div id="section-contact" className="scroll-mt-24" />
       {/* Subtle neutral lighting accent */}
       <div
         className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-white/70 to-transparent pointer-events-none"
